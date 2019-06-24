@@ -1,0 +1,130 @@
+<view class='detail_book_container'>
+
+  <!--------------------------- 封面 ----------------------------->
+  <view class='swiper whitebg'>
+    <view class='swiper-box'>
+      <!-- 滚动 -->
+      <swiper indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#ff0000">
+        <block wx:for="{{bookData.poster}}" wx:key="{{index}}">
+          <swiper-item>
+            <image mode='aspectFill' src="{{myhost}}{{item.url}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+
+
+    </view>
+  </view>
+
+  <!-- 简介 -->
+  <view class='view whitebg'>
+    <view class='view-box'>
+      <view class='view-title'>
+        <text>{{bookData.book_name}}</text>
+        <view class='favorite'>
+          <image src='{{host}}source/static/ico/star_outline.png' class='fl'></image>
+          <text class='fl' bindtap='addToCollect' data-pid='{{bookData.id}}' data-mcid='{{bookData.mcid}}' data-scid='{{bookData.scid}}' data-openid='{{openid}}'>加入收藏</text>
+        </view>
+      </view>
+      <view class='view-descript'>
+        <rich-text nodes="{{bookData.descript}}" bindtap="tap"></rich-text>
+      </view>
+      <view class='view-price'>
+        ¥
+        <text>{{bookData.price_int}}</text>.{{bookData.price_dec}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 关于 -->
+  <view class='about whitebg'>
+    <view class='about-title'>
+      <view class='common-box'>
+        <view class='about-title-name'>相关信息</view>
+
+      </view>
+
+    </view>
+    <view class='about-author'>
+      <text class='catagory-name'>作者</text>
+      <text class='catagory-value'>{{bookData.book_autor}}</text>
+      <text class='more fr'>查看作品></text>
+    </view>
+    <view class='about-publicer'>
+      <text class='catagory-name'>出版</text>
+      <text class='catagory-value'>{{bookData.book_public}}</text>
+      <text class='more fr' bindtap='viewPublic' id='{{bookData.book_public}}'>查看作品></text>
+    </view>
+    <view class='about-class'>
+      <text class='catagory-name'>分类</text>
+      <text class='catagory-value'>{{bookData.cm_name}}>{{bookData.cs_name}}</text>
+    </view>
+  </view>
+
+  <!-- 评论 -->
+  <view class='pl whitebg'>
+    <view class='pl-title'>
+      <view class='common-box'>
+        <view class='pl-title-name'>商品评论</view>
+      </view>
+    </view>
+
+    <view class='pl-list'>
+      <view class='pl-list-item'>
+        <block wx:if='{{commendList.length<1}}'>
+          <view>无评论数据</view>
+        </block>
+
+        <block wx:else>
+          <block wx:for='{{commendList}}' wx:key='{{index}}'>
+            <view class='pl-list-item-box'>
+              <view class='pl-header'>
+                <view class='pl-header-photo'>
+                  <image mode='aspectFill' src='{{myhost}}{{item.user_header}}'></image>
+                </view>
+                <view class='pl-header-ns'>
+                  <view class='user-name'>{{item.commend_who}}（匿名）</view>
+                  <view class='stars'>
+                    <star nums='{{item.commend_stars}}'></star>
+                  </view>
+                </view>
+              </view>
+              <view class='pl-content'>{{item.commend_content}}</view>
+            </view>
+          </block>
+
+        </block>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 留白 -->
+  <view style='height:100rpx;'></view>
+
+  <!-- 底部 -->
+
+  <view class='footer whitebg'>
+    <view class='footer-opts'>
+      <view class='footer-opts-home' bindtap='goToHome'>
+        <image src='../../static/icon/tabbar_home_gray.png'></image>
+        <text>首页</text>
+      </view>
+      <view class='footer-opts-share' bindtap='share'>
+        <button open-type='share' class='btn-share'></button>
+        <image mode='aspectFill' src='{{host}}source/static/ico/share.png'></image>
+        <text>分享</text>
+      </view>
+      <view class='footer-opts-cart' bindtap='goToCart'>
+        <image mode='aspectFill' src='{{host}}source/static/ico/tabbar_cart_gray.png'></image>
+        <text>购物车</text>
+        <view class='current-nums'>{{currentCartCount}}</view>
+      </view>
+
+    </view>
+    <view class='footer-buynow' bindtap='buynow'>立即购买</view>
+    <view class='footer-cart' bindtap='addToCart'>加入购物车</view>
+  </view>
+
+
+</view>

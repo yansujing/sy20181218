@@ -1,0 +1,48 @@
+/* pages/my_pl_list/my_pl_list.wxss */
+
+page {
+  background: #f1f1f1;
+}
+.pl-list-item{
+  margin-bottom: 40rpx;
+}
+.pl-box {
+  padding: 36rpx;
+}
+
+.pl-title {
+  color: #000;
+  font-size: 26rpx;
+  border-bottom: 1px dotted #999;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.pl-content {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.pl-opts {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20rpx;
+}
+
+.edit, .del {
+  margin: 0;
+  margin-left: 10rpx;
+  width: 109rpx;
+  height: 32rpx;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  background: #8067ab;
+}
+
+.del {
+  background: #333;
+}

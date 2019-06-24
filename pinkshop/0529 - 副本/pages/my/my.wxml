@@ -1,0 +1,137 @@
+<view class='my-container'>
+  <view class='my-info'>
+    <view class='my-logo'>
+      <!-- <image mode='aspectFill' src='{{host}}source/static/images/temp4.jpg'></image> -->
+      <image mode='aspectFill' src='{{photoUrl}}'></image>
+<!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button> -->
+      <view class='my-name'>你好，{{name}}！</view>
+    </view>
+    <view class='my-items'>
+      <view class='my-item' bindtap='goToInfo'>
+        <image src='{{host}}source/static/ico/my_ico_member.png'></image>
+        <view class='my-item-text'>完善资料</view>
+      </view>
+      <view class='my-item' bindtap='goToMyorder'>
+        <image src='{{host}}source/static/ico/my_ico_order.png'></image>
+        <view class='my-item-text'>订单信息</view>
+      </view>
+      <view class='my-item' bindtap='goToCommend'>
+        <image src='{{host}}source/static/ico/my_ico_common.png'></image>
+        <view class='my-item-text'>我的评论</view>
+      </view>
+      <view class='my-item'>
+        <image src='{{host}}source/static/ico/my_ico_history.png'></image>
+        <view class='my-item-text'>浏览历史</view>
+      </view>
+      <view class='my-item'>
+        <image src='{{host}}source/static/ico/my_ico_collect.png'></image>
+        <view class='my-item-text'>我的收藏</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 客服 -->
+  <view class='my-tools'>
+    <view class='my-tools-box'>
+
+      <view class='my-box-kf'>
+      <button open-type='contact' class='kf'></button>
+        <view class='my-box-ico'>
+          <image src='{{host}}source/static/ico/my_ico_contact.png'></image>
+        </view>
+        <view class='my-box-text'>客服服务</view>
+      </view>
+
+      <view class='my-box-tool'>
+        <view class='my-box-ico'>
+          <image src='{{host}}source/static/ico/my_ico_tool.png'></image>
+        </view>
+        <view class='my-box-text'>实用工具</view>
+      </view>
+
+      <view class='my-box-call' bindtap='call'>
+        <view class='my-box-ico'>
+          <image src='{{host}}source/static/ico/my_ico_tel.png'></image>
+        </view>
+        <view class='my-box-text'>电话咨询</view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='my-classic'>
+
+    <view class='my-classic-title'>
+      <view>
+        <image src='{{host}}source/static/ico/crown.png'></image>
+      </view>
+      <view>精品推荐</view>
+
+    </view>
+    
+    <view class='my-classic-body'>
+
+      <!-- 内容 -->
+      <view class='top3-hotsale-body'>
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+        <view class='top3-hotsale-body-item'>
+          <view class='top3-item-img'>
+            <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+          </view>
+          <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+          <view class='top3-item-price'>¥
+            <text class='price_int'>44</text>.38
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

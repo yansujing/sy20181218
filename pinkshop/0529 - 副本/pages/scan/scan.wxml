@@ -1,0 +1,12 @@
+<view class='scan-container'>
+
+  <view class='scan-logo'>
+    <image mode='aspectFill' src='{{myhost}}{{userInfo.user_header}}'></image>
+  </view>
+  <view class='scan-name'>你好,{{userInfo.user_name}}！</view>
+  <view class='scan-tip'>请对准条形码扫描商品</view>
+  <view class='scaning'>
+    <image mode='aspectFill' src='{{host}}source/static/images/scan-enter.png' bindtap='scanning'></image>
+  </view>
+
+</view>

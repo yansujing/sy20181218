@@ -1,0 +1,72 @@
+<view class='collect-container'>
+
+
+  <!-- --------------------------摘自list_music------------------------------ -->
+  <view class='music-list'>
+
+
+    <view class='music-list-item whitebg'>
+      <view class='music-box'>
+        <view class='music-box-left'>
+          <image mode='aspectFill' src='{{host}}source/static/images/temp2.jpg'></image>
+        </view>
+        <view class='music-box-right'>
+          <view class='title'>小苹果</view>
+
+          <view class='price'>
+            ¥
+            <text class='price_int'>44</text>.38
+          </view>
+          <view class='st'>
+            <star nums='3'></star>
+            <text>1498条评论</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <view class='music-list-item  whitebg'>
+      <view class='music-box'>
+        <view class='music-box-left'>
+          <image mode='aspectFill' src='{{host}}source/static/images/temp2.jpg'></image>
+        </view>
+        <view class='music-box-right'>
+          <view class='title'>小苹果</view>
+
+          <view class='price'>
+            ¥
+            <text class='price_int'>44</text>.38
+          </view>
+          <view class='st'>
+            <star nums='3'></star>
+            <text>1498条评论</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <view class='music-list-item  whitebg'>
+      <view class='music-box'>
+        <view class='music-box-left'>
+          <image mode='aspectFill' src='{{host}}source/static/images/temp2.jpg'></image>
+        </view>
+        <view class='music-box-right'>
+          <view class='title'>小苹果</view>
+
+          <view class='price'>
+            ¥
+            <text class='price_int'>44</text>.38
+          </view>
+          <view class='st'>
+            <star nums='3'></star>
+            <text>1498条评论</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

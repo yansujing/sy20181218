@@ -1,0 +1,25 @@
+/* pages/my_pl_history/my_pl_history.wxss */
+
+
+.history-box{
+  padding: 35rpx;
+}
+
+.history-item{
+  width: 100%;
+  border-bottom: #ccc 1px dotted;
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+
+}
+
+.history-date{
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.history-title{
+  font-size: 30rpx;
+  color: #000;
+}

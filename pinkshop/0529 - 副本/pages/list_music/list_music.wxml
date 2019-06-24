@@ -1,0 +1,64 @@
+<view class='list-music-container'>
+
+  <!--搜索-->
+  <search bindtap='search' bgcolor="DEF2FC"></search>
+
+  <!--菜单-->
+  <view class='nav'>
+    <block wx:for="{{classList}}" wx:key="{{index}}">
+      <view class='nav-item {{item.active}}' bindtap='getMusicBy' id='{{item.id}}'>{{item.cs_name}}</view>
+    </block>
+  </view>
+
+  <!--列表-->
+  <view class='music-list'>
+
+  
+
+  <block wx:for="{{musicList}}" wx:key="{{index}}">
+    <view class='music-list-item' bindtap='goToMusicDetail' id='{{item.id}}'>
+      <view class='music-box'>
+        <view class='music-box-left'><image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image></view>
+        <view class='music-box-right'>
+
+          <view class='title'>{{item.music_title}}</view>
+
+          <view class='about'>原唱：{{item.music_singer}}/作曲：{{item.music_compose}}/填词：{{item.music_writer}}</view>
+
+          <view class='price'>￥<text>{{item.price_int}}</text>.{{item.price_dec}}</view>
+
+          <view class='sr'>
+            <star nums="{{item.stars}}"></star>
+            <text>{{item.total}}条评论</text>
+          </view>
+
+          <view class='options'>
+            <view class='download'>
+              <image src='{{host}}source/static/ico/download.png' class='fl'></image>
+              <text class='fl'>下载</text>
+            </view>
+            <view class='play'>
+              <image src='{{host}}source/static/ico/play.png' class='fl'></image>
+              <text class='fl'>播放</text>
+            </view>
+            <view class='favorite'>
+              <image src='{{host}}source/static/ico/collect.png' class='fl'></image>
+              <text class='fl'>收藏</text>
+            </view>
+            <view class='buy'>
+              <image src='{{host}}source/static/ico/buy.png' class='fl'></image>
+              <text class='fl'>购买</text>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+
+  </view>
+
+
+</view>

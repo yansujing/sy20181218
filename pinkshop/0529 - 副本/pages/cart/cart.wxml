@@ -1,0 +1,90 @@
+<view class='cart-container'>
+  <view class='cart-body whitebg'>
+
+    <block wx:if='{{hasData}}'>暂无数据！！！</block>
+    <block wx:else>
+      <block wx:for='{{cartDatas.book}}' wx:key='{{index}}'>
+        <view class='cart-item'>
+          <view class='cart-item-box'>
+            <view>
+              <image mode='aspectFill' src='{{myhost}}{{item.poster}}' class='poster'></image>
+            </view>
+            <view class='cart-item-info'>
+              <view class='item-title'>{{item.pname}}</view>
+              <view class='item-price'>¥{{item.price}}</view>
+              <view class='item-opts'>
+                <view class='buy-nums'>
+                  <view class='sub' bindtap='sub' data-bmm='book' data-index='{{index}}'>-</view>
+                  <view class='inputnums'>
+                    <input type='text' value='{{item.count}}' style='width:80rpx;height:40rpx;'></input>
+                  </view>
+                  <view class='add' bindtap='adds' data-bmm='book' data-index='{{index}}'>+</view>
+                </view>
+                <view class='rubbish' bindtap='remove' data-bmm='book' data-index='{{index}}'>
+                  <image src='{{host}}source/static/ico/rubish.png'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:for='{{cartDatas.music}}' wx:key='{{index}}'>
+        <view class='cart-item'>
+          <view class='cart-item-box'>
+            <view>
+              <image mode='aspectFill' src='{{myhost}}{{item.poster}}' class='poster'></image>
+            </view>
+            <view class='cart-item-info'>
+              <view class='item-title'>{{item.pname}}</view>
+              <view class='item-price'>¥{{item.price}}</view>
+              <view class='item-opts'>
+                <view class='buy-nums'>
+                  <view class='sub' bindtap='sub' data-bmm='music' data-index='{{index}}'>-</view>
+                  <view class='inputnums'>
+                    <input type='text' value='{{item.count}}' style='width:80rpx;height:40rpx;'></input>
+                  </view>
+                  <view class='add' bindtap='adds' data-bmm='music' data-index='{{index}}'>+</view>
+                </view>
+                <view class='rubbish' bindtap='remove' data-bmm='music' data-index='{{index}}'>
+                  <image src='{{host}}source/static/ico/rubish.png'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:for='{{cartDatas.movie}}' wx:key='{{index}}'>
+        <view class='cart-item'>
+          <view class='cart-item-box'>
+            <view>
+              <image mode='aspectFill' src='{{myhost}}{{item.poster}}' class='poster'></image>
+            </view>
+            <view class='cart-item-info'>
+              <view class='item-title'>{{item.pname}}</view>
+              <view class='item-price'>¥{{item.price}}</view>
+              <view class='item-opts'>
+                <view class='buy-nums'>
+                  <view class='sub'>-</view>
+                  <view class='inputnums'>
+                    <input type='text' value='{{item.count}}' style='width:80rpx;height:40rpx;'></input>
+                  </view>
+                  <view class='add'>+</view>
+                </view>
+                <view class='rubbish'>
+                  <image src='{{host}}source/static/ico/rubish.png'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class='total-info '>
+        <view>消费合计：</view>
+        <view>¥{{tatalPrice}}</view>
+        <view bindtap='goToOrder'>去结算</view>
+      </view>
+    </block>
+
+  </view>
+
+</view>

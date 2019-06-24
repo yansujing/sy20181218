@@ -1,0 +1,85 @@
+<view class='list-movie-container'>
+
+  <!--搜索-->
+  <search bindtap='search' bgcolor="FFDFEC"></search>
+
+  <!--菜单-->
+  <view class='nav'>
+  
+    <view class='nav-box'>
+
+      <view class='nav-item'>
+      
+        <view class='nav-item-title'>全部类型</view>
+
+        <view class='nav-item-body'>
+          
+          <view class='nav-list-item {{isTypeALL}}' id='999' bindtap='showByType'>全部</view>
+
+          <block wx:for="{{movieTypes}}" wx:key="{{index}}">
+            <view class='nav-list-item {{item.active}}' id='{{item.id}}' bindtap='showByType'>{{item.cs_name}}</view>
+          </block>
+
+        </view>
+      
+      </view>
+
+
+
+      <view class='nav-item all-country'>
+      
+        <view class='nav-item-title where'>全部地区</view>
+
+        <view class='nav-item-body'>
+
+            <view class='nav-list-item {{isCountryALL}}' id='888' bindtap='showByCountry'>全部</view>
+
+         <block wx:for="{{movieCountry}}" wx:key="{{index}}">
+            <view class='nav-list-item {{item.active}}' id='{{item.id}}' bindtap='showByCountry'>{{item.cs_name}}</view>
+          </block>
+
+        </view>
+      
+      </view>
+
+
+    </view>
+  
+  </view>
+
+
+  <!--列表-->
+  <view class='movie-list'>
+
+
+
+    <block wx:for="{{movieDatas}}" wx:key="{{index}}">
+
+        <view class='list-item' bindtap='goToMovie' id='{{item.id}}'>
+          <view class='list-item-left'>
+            <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+          </view>
+          <view class='list-item-right'>
+            <view class='title'>{{item.movie_name}}</view>
+            <view class='author'>导演：{{item.movie_dirctor}}</view>
+            <view class='publicer'>国家：{{item.country}}</view>
+            <view class='public-date'>主演：{{item.movie_roles}}</view>
+            <view class='descript'>类型：{{item.types}}</view>
+            <view class='price'>￥<text>{{item.price_int}}</text>.{{item.price_dec}}</view>
+            <view class='recommend'>
+              <star nums="{{item.stars}}"></star>
+              <text>{{item.commends}}条评论</text>
+            </view>
+          </view>
+        
+        </view>
+    </block>
+
+
+
+
+  
+  </view>
+
+
+</view>

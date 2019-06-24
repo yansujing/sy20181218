@@ -1,0 +1,36 @@
+<view class='info-container'>
+  <form bindsubmit="formSubmit" bindreset="formReset" content-type='multipart/form-data'>
+    <view class='info-box whitebg'>
+
+      <view class='info-item'>您的姓名：
+        <input name='name' type='text' class='info-name' value='{{myname}}'></input>
+      </view>
+
+      <view class='info-item'>手机号码：
+        <input name='tel' type='number' class='info-tel' value='{{tel}}'></input>
+      </view>
+
+      <view class='info-item'>收货地址：
+        <input name='address' class='address' value='{{address}}'></input>
+        <button class='maplocation' bindtap='getLocation'>地图定位</button>
+      </view>
+
+      <view class='info-item'>邮政编码：
+        <input name='poster' type='number' class='info-poster' placeholder='选填' value='{{post}}'></input>
+      </view>
+
+      <view class='info-item'>上传头像：
+        <button class='upload' bindtap='upload'>点击选择照片或拍照</button>
+        <image mode='aspectFill' src='{{myheader}}' class='myheader'></image>
+      </view>
+
+    </view>
+
+    <view class='info-opts whitebg'>
+      <view class='info-opts-box'>
+        <button form-type="submit">{{isReg?'注册':'修改'}}</button>
+        <button form-type="reset">重置</button>
+      </view>
+    </view>
+  </form>
+</view>

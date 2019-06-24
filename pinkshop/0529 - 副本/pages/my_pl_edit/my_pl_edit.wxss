@@ -1,0 +1,61 @@
+/* pages/my_pl_list/my_pl_list.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.pl-list-item {
+  margin-bottom: 40rpx;
+}
+
+.pl-box {
+  padding: 36rpx;
+}
+
+.pl-title {
+  color: #000;
+  font-size: 26rpx;
+  border-bottom: 1px dotted #999;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.pl-content {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.pl-select-stars {
+  text-align: center;
+}
+
+.pl-select-stars image {
+  height: 40rpx;
+  width: 40rpx;
+  margin: 10rpx;
+}
+.pl-post-body{
+  margin-top: 20rpx;
+}
+.pl-post-body textarea {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: #ccc 1px solid;
+  font-size: 21rpx;
+
+}
+.pl-submit{
+  padding-top: 20rpx;
+}
+.pl-submit button{
+  width: 109rpx;
+  height: 32rpx;
+  background: #FF0000;
+  color: #FFF;
+  font-size: 21rpx;
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 20rpx;
+}

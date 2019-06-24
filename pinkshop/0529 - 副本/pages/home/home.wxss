@@ -1,0 +1,313 @@
+.search .search-box {
+  background: #ffb;
+}
+
+/********************************************** 轮播 **************************************/
+
+.swiper {
+  margin-top: 17rpx;
+}
+
+.swiper #adswiper {
+  width: 100%;
+  height: 250rpx;
+}
+
+.swiper #adswiper .slide-image {
+  width: 750rpx;
+  height: 250rpx;
+}
+
+/******************************************* 目录 *******************************************/
+
+.nav .nav-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav .nav-box .nav-item {
+  width: 20%;
+  text-align: center;
+  font-size: 23rpx;
+  color: #5d5d5d;
+  margin-top: 24rpx;
+}
+
+.nav .nav-box .nav-item:nth-child(n+6) {
+  margin-top: 26rpx;
+  margin-bottom: 28rpx;
+}
+
+.nav .nav-box .nav-item .nav-item-img image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+/********************************************** 畅销书排行榜 top3**************************************/
+
+.top3 .top3-hotsale {
+  background: #fbbebd;
+}
+
+.top3-item-box {
+  padding: 26rpx 24rpx;
+}
+
+.top3-hotsale-title {
+  display: flex;
+  font-size: 24rpx;
+  color: #fff;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.top3-hotsale-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top3-hotsale-body-item {
+  position: relative;
+  width: 32%;
+  height: 345rpx;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.top3-item-img {
+  text-align: center;
+}
+
+.top3-item-img image {
+  width: 195rpx;
+  height: 194rpx;
+  margin-top: 17rpx;
+}
+
+.top3-item-title {
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 195rpx;
+  height: 64rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #484848;
+  text-align: center;
+}
+
+.top3-item-price {
+  font-size: 24rpx;
+  color: #e12616;
+  text-align: center;
+}
+
+.top3-item-price .price_int {
+  font-size: 32rpx;
+}
+
+/********************************************** 快讯 **************************************/
+
+.top3-news {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 95rpx;
+  background: linear-gradient(#fbbebd, #9cc);
+}
+
+.top3-new-body {
+  width: 700rpx;
+  height: 70rpx;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.top3-new-body-ico {
+  margin-top: 16rpx;
+  margin-left: 16rpx;
+  width: 90rpx;
+  height: 34rpx;
+  float: left;
+}
+
+#newsSwiper {
+  margin-top: 16rpx;
+  margin-left: 20rpx;
+  float: left;
+  width: 520rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+}
+
+/********************************************** 特价包邮 **************************************/
+
+.top3-newbook {
+  background: #9cc;
+}
+
+.ico99 {
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  width: 74rpx;
+  height: 74rpx;
+}
+
+/********************************************** 渐变 **************************************/
+
+.line {
+  height: 30rpx;
+  background: linear-gradient(#9cc, #fff);
+}
+
+/********************************************** 五星 **************************************/
+
+.fivestars {
+  padding-top: 28rpx;
+}
+
+.fivestars-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-name {
+  width: 318rpx;
+  height: 51rpx;
+  border-bottom-right-radius: 30rpx;
+  background: linear-gradient(10deg, #d7b2fc, #b065f9);
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.tilte-music {
+  background: linear-gradient(10deg, #ffcd81, #f90);
+}
+
+.tilte-movie {
+  background: linear-gradient(10deg, #ff9f99, #ff3b30);
+}
+
+.title-name image {
+  width: 38rpx;
+  height: 36rpx;
+  float: left;
+  margin: 7rpx 0px 0px 17rpx;
+}
+
+.title-name text {
+  float: left;
+  margin: 5rpx 0px 0px 10rpx;
+}
+
+.more {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 32rpx;
+}
+
+.fivestars-item-body-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 33rpx 40rpx 33rpx;
+}
+
+.box-left {
+  /* height: 420rpx; */
+  overflow: hidden;
+}
+
+.box-left-title {
+  width: 428rpx;
+  height: 75rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.box-left-recommend {
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 22rpx;
+  color: #acb4bd;
+  margin: 40rpx 0px 15rpx 0rpx;
+}
+
+.fivestars-ico image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 8rpx;
+}
+
+.recommend {
+  font-size: 22rpx;
+  color: #acb4bd;
+  margin-left: 10rpx;
+}
+
+.box-left-price {
+  color: #d81e06;
+  font-size: 22rpx;
+}
+
+.box-left-price text {
+  font-size: 40rpx;
+}
+
+.box-right-img {
+  width: 157rpx;
+  height: 216rpx;
+  margin-right: 30rpx;
+}
+
+/********************************************** top6**************************************/
+
+/************ 流行音乐榜  *********/
+
+.top6-music {
+  background: #aee800;
+}
+
+.top6-item-title {
+  height: 32rpx;
+  text-align: left;
+}
+
+.top6-item-stars {
+  display: flex;
+  align-items: center;
+  width: 195rpx;
+  margin: 3rpx auto;
+  height: 27rpx;
+}
+
+.top6-item-stars image {
+  width: 25rpx;
+  height: 25rpx;
+  margin: 0 2rpx;
+}
+
+.top6-item-price {
+  color: #ff5c00;
+  text-align: left;
+  margin-left: 18rpx;
+}
+
+.top6-body {
+  flex-wrap: wrap;
+}
+
+.top6-body-item {
+  margin-bottom: 35rpx;
+}
+
+.top6-line {
+  height: 45rpx;
+  background: linear-gradient(#aee800, #ffaf37);
+}
+
+/************ 电影票房榜  *********/
+
+.top6-movie {
+  background: #ffaf37;
+}

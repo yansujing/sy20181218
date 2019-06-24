@@ -1,0 +1,44 @@
+<view class='order-container'>
+  <view class='contact'>
+    <view class='border'></view>
+    <view class='receiver'>
+
+      <view class='receiver-name'>
+        <view>
+          <image src='{{host}}source/static/ico/address.png'></image>
+        </view>
+        <text>收件人：{{receiver}}</text>
+      </view>
+
+      <view class='tel'>{{mobile}}</view>
+    </view>
+    <view class='address'>{{address}}</view>
+    <view class='border'></view>
+  </view>
+  <view class='products'>
+    <view class='p-title'>
+
+      <view>
+        <image src='{{host}}source/static/ico/content.png'></image>
+      </view>
+      <text>购买内容</text>
+
+    </view>
+    <view class='p-content'>
+
+      <image mode='aspectFill' wx:for='{{poster}}' wx:key='{{key}}' src='{{myhost}}{{item}}'></image>
+    </view>
+    <view class='p-count'>
+      <text>商品总金额</text>
+      <text>¥{{price}}</text>
+    </view>
+
+  </view>
+  <view class='opts'>
+    <text>总额（含运费）</text>
+    <text>¥{{postPrice}}</text>
+    <button bindtap='createOrder'>提交订单</button>
+
+  </view>
+
+</view>

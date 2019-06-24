@@ -1,0 +1,27 @@
+<view class='history-container'>
+
+  <view class='history-box'>
+
+    <view class='history-item'>
+
+      <view class='history-date'>日期：fsdafasd</view>
+      <view class='history-title'>标题</view>
+
+    </view>
+
+    <view class='history-item'>
+
+      <view class='history-date'>日期：fsdafasd</view>
+      <view class='history-title'>标题</view>
+
+    </view>
+
+    <view class='history-item'>
+
+      <view class='history-date'>日期：fsdafasd</view>
+      <view class='history-title'>标题</view>
+
+    </view>
+
+  </view>
+</view>

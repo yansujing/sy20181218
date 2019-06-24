@@ -1,0 +1,88 @@
+.nav {
+}
+
+.nav-box {
+  display: flex;
+  /* flex-wrap: wrap; */
+  border-bottom: 1rpx solid #e4e4e4;
+  padding: 15rpx 23rpx 0 23rpx;
+}
+
+.nav-item {
+  width: 25%;
+  height: 90rpx;
+  line-height: 95rpx;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 30rpx;
+}
+
+.active {
+  color: #ef0000;
+  border-bottom: 2px solid #ef0000;
+  box-sizing: border-box;
+}
+
+/******************************列表  ***********************************/
+
+.list-item {
+  border-bottom: #e4e4e4 1px solid;
+  padding: 40rpx;
+  display: flex;
+}
+
+.list-item-left image {
+  width: 180rpx;
+  height: 240rpx;
+}
+
+.list-item-right {
+  margin-left: 40rpx;
+  color: #666;
+}
+
+.title {
+  color: #000000;
+  font-size: 28rpx;
+  height: 34rpx;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.author, .publicer, .public-date, .descript {
+  font-size: 23rpx;
+  color: #666;
+  margin:7rpx 0;
+}
+
+.descript {
+  font-size: 18rpx;
+}
+
+.price {
+  color: #e43728;
+  font-size: 24rpx;
+}
+
+.price text {
+  font-size: 30rpx;
+}
+
+.recommend {
+  display: flex;
+  align-items: center;
+  height: 23rpx;
+}
+
+.stars image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.recommend text {
+  font-size: 20rpx;
+  color: #a7a7a7;
+  margin-top:5rpx;
+  margin-left:10rpx;
+}

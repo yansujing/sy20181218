@@ -1,0 +1,55 @@
+<view class='list-music-container'>
+
+  <!--搜索-->
+
+  <view class='search'>
+
+    <view class='search-box' style='background:#DEF2FC;'>
+      <image src='{{host}}source/static/ico/search.png' mode='aspectFill' class='search-box-ico' bindtap='runSearch'></image>
+      <text>{{text}}</text>
+      <input placeholder='请输入搜索内容' focus='true' auto-focus='true' bindblur='getValue'></input>
+    </view>
+
+  </view>
+
+  <!--菜单-->
+
+  <!--列表-->
+  <view class='music-list'>
+    <block wx:if='{{!hasData}}'>
+      <view>暂无数据</view>
+    </block>
+    <block wx:else>
+      <block wx:for="{{searchData}}" wx:key="{{index}}">
+        <view class='music-list-item' bindtap='goToDetail' id='{{item.id}}'>
+          <view class='music-box'>
+            <view class='music-box-left'>
+              <image mode='aspectFill' src='{{myhost}}{{item.url}}'></image>
+            </view>
+            <view class='music-box-right'>
+
+              <view class='title'>{{item.pname}}</view>
+
+              <view class='about'>{{item.descript}}</view>
+
+              <view class='price'>￥
+                <text>{{item.price_int}}</text>.{{item.price_dec}}</view>
+
+              <view class='sr'>
+                <star nums="{{item.stars}}"></star>
+                <text>{{item.total}}条评论</text>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </block>
+
+
+
+  </view>
+
+
+</view>

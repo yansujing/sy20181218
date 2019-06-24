@@ -1,0 +1,55 @@
+<view class='order-container'>
+
+  <!-- 摘自list-moview -->
+  <!-- 列表 -->
+  <view class='movie-list'>
+    <block wx:if='{{!ishas}}'>
+      <view>暂无订单信息</view>
+    </block>
+
+
+
+
+
+    <block wx:else>
+      <block wx:for='{{orderDatas}}' wx:key='{{index}}'>
+        <view class='list-item whitebg'>
+          <view class='list-item-left'>
+            <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+          </view>
+          <view class='list-item-right'>
+            <view class='title'>
+              {{item.pname}}
+            </view>
+            <view class='dp'>
+              <text>下单日期：{{item.order_date}}</text>
+              <text>商品价格：¥{{item.price}}</text>
+            </view>
+            <block wx:if='{{!item.stars>0}}'>
+              <view class='post-recommend' bindtap='goToRecommendAdd' data-mcid='{{item.mcid}}' data-pid='{{item.pid}}' data-pname='{{item.pname}}'>
+                发表评论
+              </view>
+            </block>
+            <block wx:else>
+              <view class='pl'>
+                <view class='pl-info'>
+                  <view class='recommend '>
+                    <star nums="{{item.stars}}"></star>
+                    <text>{{item.counts}}条评论</text>
+                  </view>
+                  <view class='edit-pl' bindtap='editCommend' data-mcid='{{item.mcid}}' data-pid='{{item.pid}}' data-pname='{{item.pname}}' data-stars='{{item.stars}}' data-commend='{{item.commend}}'>编辑评论</view>
+                </view>
+
+                <view class='pl-content'>
+                  {{item.commend}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+
+      </block>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "star": "../../components/stars/stars"
+  },
+  "navigationBarTitleText": "电影"
+}

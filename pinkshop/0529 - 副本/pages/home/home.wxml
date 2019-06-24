@@ -1,0 +1,515 @@
+<view class='home-container'>
+
+  <!-- 搜索框 -->
+  <view class='search'>
+
+    <view class='search-box' bindtap='goToSearch'>
+      <image src='{{host}}source/static/ico/search.png' mode='aspectFill' class='search-box-ico'></image>
+      <text>搜索全部商品</text>
+    </view>
+
+  </view>
+
+  <!-- 轮播 -->
+  <view class='swiper'>
+
+    <swiper id='adswiper' indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#F7FBFC'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image mode='aspectFill' src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+
+  <!-- 菜单 -->
+  <view class='nav'>
+
+    <view class='nav-box'>
+      <view class='nav-item' bindtap='goToBookList' id='789' data-tag='hotsale'>
+        <!-- <navigator url=""> -->
+        <view class='nav-item-img'>
+          <image src='{{host}}source/static/images/nav_hotsale.png'></image>
+        </view>
+        <view class='nav-item-text'>热销图书</view>
+        <!-- </navigator> -->
+      </view>
+      <view class='nav-item' bindtap='goToBookList' id='111' data-tag='newbook'>
+        <view class='nav-item-img'>
+          <image src='{{host}}source/static/images/nav_newbook.png'></image>
+        </view>
+        <view class='nav-item-text'>新书上架</view>
+      </view>
+      <view class='nav-item' bindtap='goToBookList' id='99' data-tag='9.9包邮'>
+        <view class='nav-item-img'>
+          <image src='{{host}}source/static/images/nav_99.png'></image>
+        </view>
+        <view class='nav-item-text'>9.9包邮</view>
+      </view>
+      <view class='nav-item' bindtap='goToMusicList'>
+        <view class='nav-item-img'>
+          <image src='{{host}}source/static/images/nav_music.png'></image>
+        </view>
+        <view class='nav-item-text'>音乐在线</view>
+      </view>
+      <view class='nav-item' bindtap='goToMovieList'>
+        <view class='nav-item-img'>
+          <image src='{{host}}source/static/images/nav_movie.png'></image>
+        </view>
+        <view class='nav-item-text'>电影频道</view>
+      </view>
+
+      <block wx:for='{{bookClass}}' wx:key='{{index}}'>
+        <view class='nav-item' bindtap='goToBookList' id=' {{item.id}}' data-tag='{{item.cs_name}}'>
+          <view class='nav-item-img'>
+            <image src='{{host}}source/static/images/{{item.ico_name}}'></image>
+          </view>
+          <view class='nav-item-text'>{{item.cs_name}}</view>
+        </view>
+        <!-- <view class='nav-item' bindtap='goToBookList' id=' culture'>
+          <view class='nav-item-img'>
+            <image src='{{host}}source/static/images/nav_culture.png'></image>
+          </view>
+          <view class='nav-item-text'>青春文学</view>
+        </view>
+        <view class='nav-item' bindtap='goToBookList' id=' people'>
+          <view class='nav-item-img'>
+            <image src='{{host}}source/static/images/nav_people.png'></image>
+          </view>
+          <view class='nav-item-text'>人物传记</view>
+        </view>
+        <view class='nav-item' bindtap='goToBookList' id=' children'>
+          <view class='nav-item-img'>
+            <image src='{{host}}source/static/images/nav_children.png'></image>
+          </view>
+          <view class='nav-item-text'>儿童图书</view>
+        </view>
+        <view class='nav-item' bindtap='goToBookList' id=' tec'>
+          <view class='nav-item-img'>
+            <image src='{{host}}source/static/images/nav_tec.png'></image>
+          </view>
+          <view class='nav-item-text'>科学技术</view>
+        </view> -->
+
+      </block>
+
+    </view>
+
+  </view>
+
+  <!-- Top3 -->
+  <view class='top3'>
+
+    <!-- 畅销书排行榜 -->
+    <view class='top3-hotsale'>
+
+      <view class='top3-item-box'>
+
+        <!-- 标题 -->
+        <view class='top3-hotsale-title'>
+          <text>畅销书排行榜-TOP3</text>
+          <text>查看更多></text>
+        </view>
+
+        <!-- 内容 -->
+        <view class='top3-hotsale-body'>
+          <block wx:for='{{hotSaleTop3}}' wx:key='{{index}}'>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+              </view>
+              <view class='top3-item-title'>{{item.book_name}}</view>
+              <view class='top3-item-price'>¥
+                <text class='price_int'>{{item.price_int}}</text>.{{item.price_dec}}
+              </view>
+            </view>
+          </block>
+          <!-- <view class='top3-hotsale-body-item'>
+            <view class='top3-item-img'>
+              <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+            </view>
+            <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+            <view class='top3-item-price'>¥
+              <text class='price_int'>44</text>.38
+            </view>
+          </view>
+          <view class='top3-hotsale-body-item'>
+            <view class='top3-item-img'>
+              <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+            </view>
+            <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+            <view class='top3-item-price'>¥
+              <text class='price_int'>44</text>.38
+            </view>
+          </view> -->
+        </view>
+
+      </view>
+
+    </view>
+
+    <!-- 快讯 -->
+    <view class='top3-news'>
+      <view class='top3-item-box'>
+        <view class='top3-new-body'>
+          <image class='top3-new-body-ico' src='{{host}}source/static/ico/ico_news.gif'></image>
+
+          <swiper id='newsSwiper' autoplay="{{autoplay}}" circular="true" interval="{{interval}}" duration="{{duration}}" vertical='true'>
+            <block wx:for="{{textUrls}}" wx:key="{{index}}">
+              <swiper-item>
+                <view>{{item}}</view>
+              </swiper-item>
+            </block>
+          </swiper>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 特价包邮 -->
+    <view class='top3-newbook'>
+      <view class='top3-item-box'>
+        <!-- 标题 -->
+        <view class='top3-hotsale-title'>
+          <text>特价书抢先看-特价包邮</text>
+          <text>查看更多></text>
+        </view>
+
+        <!-- 内容 -->
+        <view class='top3-hotsale-body'>
+          <block wx:for='{{nine9}}' wx:key='{{index}}'>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+              </view>
+              <view class='top3-item-title'>{{item.book_name}}</view>
+              <view class='top3-item-price'>¥
+                <text class='price_int'>{{item.price_int}}</text>.{{item.price_dec}}
+              </view>
+              <image src='{{host}}source/static/ico/ico99.png' class='ico99' wx:if='{{item.book_99==1}}'></image>
+            </view>
+          </block>
+          <!-- <view class='top3-hotsale-body-item'>
+            <view class='top3-item-img'>
+              <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+            </view>
+            <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+            <view class='top3-item-price'>¥
+              <text class='price_int'>44</text>.38
+            </view>
+            <image src='{{host}}source/static/ico/ico99.png' class='ico99'></image>
+          </view>
+
+          <view class='top3-hotsale-body-item'>
+            <view class='top3-item-img'>
+              <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+            </view>
+            <view class='top3-item-title'>图书名称即可将了解了解了解了</view>
+            <view class='top3-item-price'>¥
+              <text class='price_int'>44</text>.38
+            </view>
+          </view> -->
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 渐变 -->
+  <view class='line'></view>
+
+  <!---------------------------------- 五星 --------------------------------------------------->
+  <view class='fivestars'>
+
+    <!------------- 图书 --------------->
+    <view class='fivestars-item'>
+      <!-- 标题 -->
+      <view class='fivestars-item-title'>
+        <view class='title-name'>
+          <image src='{{host}}source/static/ico/stars-outline.png'></image>
+          <text>五星图书榜第1名</text>
+        </view>
+        <text class='more'>查看更多></text>
+      </view>
+      <!-- 五星图书榜第一名-内容 -->
+      <view class='fivestars-item-body'>
+        <view class='fivestars-item-body-box'>
+          <!-- 左边 -->
+          <view class='box-left'>
+            <view class='box-left-title'>{{fiveStarsBook.pname}}</view>
+            <view class='box-left-recommend'>
+              <view class='fivestars-ico'>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+              </view>
+              <text class='recommend'>{{fiveStarsBook.total}}条评论</text>
+            </view>
+            <view class='box-left-price'>
+              ¥
+              <text>{{fiveStarsBook.price_int}}</text>.{{fiveStarsBook.price_dec}}
+            </view>
+          </view>
+
+          <!-- 右边 -->
+          <view class='box-right'>
+            <image src='{{myhost}}{{fiveStarsBook.url}}' class='box-right-img' mode='aspectFill'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!------------------- 音乐 ------------------->
+    <view class='fivestars-item'>
+      <!-- 标题 -->
+      <view class='fivestars-item-title'>
+        <view class='title-name tilte-music'>
+          <image src='{{host}}source/static/ico/stars-outline.png'></image>
+          <text>五星音乐榜第1名</text>
+        </view>
+        <text class='more'>查看更多></text>
+      </view>
+      <!-- 内容 -->
+      <view class='fivestars-item-body'>
+        <view class='fivestars-item-body-box'>
+          <!-- 左边 -->
+          <view class='box-left'>
+            <view class='box-left-title'>{{fiveStarsMusic.pname}}</view>
+            <view class='box-left-recommend'>
+              <view class='fivestars-ico'>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+              </view>
+              <text class='recommend'>{{fiveStarsMusic.total}}条评论</text>
+            </view>
+            <view class='box-left-price'>
+              ¥
+              <text>{{fiveStarsMusic.price_int}}</text>.{{fiveStarsMusic.price_dec}}
+            </view>
+          </view>
+
+          <!-- 右边 -->
+          <view class='box-right'>
+            <image src='{{myhost}}{{fiveStarsMusic.url}}' class='box-right-img' mode='aspectFill'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!------------------------- 电影 ------------------------->
+    <view class='fivestars-item'>
+      <!-- 标题 -->
+      <view class='fivestars-item-title'>
+        <view class='title-name tilte-movie'>
+          <image src='{{host}}source/static/ico/stars-outline.png'></image>
+          <text>五星电影榜第1名</text>
+        </view>
+        <text class='more'>查看更多></text>
+      </view>
+      <!-- 内容 -->
+      <view class='fivestars-item-body'>
+        <view class='fivestars-item-body-box'>
+          <!-- 左边 -->
+          <view class='box-left'>
+            <view class='box-left-title'>1发生担任发斯蒂芬哈迪斯发货的话费卡</view>
+            <view class='box-left-recommend'>
+              <view class='fivestars-ico'>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+                <image src='{{host}}source/static/ico/star.png'></image>
+              </view>
+              <text class='recommend'>963条评论</text>
+            </view>
+            <view class='box-left-price'>
+              ¥
+              <text>44</text>.38
+            </view>
+          </view>
+
+          <!-- 右边 -->
+          <view class='box-right'>
+            <image src='{{host}}source/static/images/temp2.jpg' class='box-right-img' mode='aspectFill'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!------------------------------------------------------ Top6 ---------------------------------------------------->
+  <view class='top6'>
+    <!-------------------- 流行音乐-TOP6 ------------------->
+    <view class='top6-music'>
+      <view class='top3-hotsale'>
+
+        <view class='top3-item-box'>
+
+          <!-- 标题 -->
+          <view class='top3-hotsale-title'>
+            <text>流行音乐-TOP6</text>
+            <text>查看更多></text>
+          </view>
+
+          <!-- 内容 -->
+          <view class='top3-hotsale-body top6-body'>
+            <block wx:for='{{musicTop6}}' wx:key='{{index}}'>
+              <view class='top3-hotsale-body-item top6-body-item'>
+                <view class='top3-item-img'>
+                  <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+                </view>
+                <view class='top3-item-title top6-item-title'>{{item.music_title}}</view>
+                <view class='top6-item-stars'>
+                  <star nums='{{item.stars}}'></star>
+                </view>
+                <view class='top3-item-price top6-item-price'>¥
+                  <text class='price_int'>{{item.price_int}}</text>.{{item.price_dec}}
+                </view>
+              </view>
+            </block>
+
+          </view>
+
+        </view>
+
+      </view>
+
+    </view>
+    <!------------------ 渐变---------------------->
+    <view class='top6-line'>
+
+
+    </view>
+    <!------------------ 电影票房榜 ---------------------->
+
+    <view class='top6-movie'>
+
+      <view class='top3-hotsale'>
+
+        <view class='top3-item-box'>
+
+          <!-- 标题 -->
+          <view class='top3-hotsale-title'>
+            <text>流行音乐-TOP6</text>
+            <text>查看更多></text>
+          </view>
+
+          <!-- 内容 -->
+          <view class='top3-hotsale-body top6-body'>
+            <view class='top3-hotsale-body-item top6-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+            <view class='top3-hotsale-body-item'>
+              <view class='top3-item-img'>
+                <image mode='aspectFill' src='{{host}}source/static/images/temp.jpg'></image>
+              </view>
+              <view class='top3-item-title top6-item-title'>图书名称即可将了解了解了解了</view>
+              <view class='top6-item-stars'>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+                <image src='{{host}}source/static/ico/star-yellow.png'></image>
+              </view>
+              <view class='top3-item-price top6-item-price'>¥
+                <text class='price_int'>44</text>.38
+              </view>
+            </view>
+
+          </view>
+
+        </view>
+
+      </view>
+
+    </view>
+
+
+  </view>
+
+</view>

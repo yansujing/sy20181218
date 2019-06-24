@@ -1,0 +1,31 @@
+<view class='pl-list-container'>
+
+  <view class='pl-list-item whitebg'>
+    <view class='pl-box'>
+      <view class='pl-title'>{{pname}}</view>
+      <view class='pl-select-stars'>
+
+        <block wx:for="{{starsList}}" wx:key='{{index}}'>
+          <image src='{{item }}' bindtap='selectStart' id='{{index+1}}'></image>
+        </block>
+
+      </view>
+
+      <form bindsubmit='formSubmit'>
+
+
+        <view class='pl-post-body'>
+          <textarea placeholder='请输入评论内容' class='textarea' name='text'></textarea>
+        </view>
+        <view class='pl-submit'>
+          <button form-type="submit">确定</button>
+        </view>
+
+
+      </form>
+    </view>
+
+  </view>
+
+
+</view>

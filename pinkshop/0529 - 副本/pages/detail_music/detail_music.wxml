@@ -1,0 +1,209 @@
+<view class='detail_music_container'>
+
+
+<!--相关信息-->
+<view class='music-about'>
+
+  <view class='music-about-title'>
+    <view class='common-box'>
+      <view class='title-name'>相关信息</view>
+    </view>
+  </view>
+
+  <view class='music-about-panel'>
+    <view class='panel-box'>
+      <image class='poster' mode='aspectFill' src='{{myhost}}{{musicDetail.poster}}'></image>
+
+      <image class='btn-play' wx:if="{{!isPlay}}" bindtap='play' src='{{host}}source/static/ico/btn_play.png'></image>
+      <image class='btn-play' wx:if="{{isPlay}}" bindtap='pause' src='{{host}}source/static/ico/btn_pause.png'></image>
+
+      <view class='music-info'>
+        <view class='music-name'>{{musicDetail.music_title}}</view>
+        <view class='music-singer'>{{musicDetail.music_singer}}</view>
+      </view>
+      <text class='music-time'>{{leftMinutes}}:{{leftSeconds}}</text>
+    </view>
+  </view>
+
+
+  <view class='music-about-content'>
+
+    <view class='content-item'>歌名：{{musicDetail.music_title}}</view>
+    <view class='content-item'><text>歌手：{{musicDetail.music_singer}}</text> <text>作曲：{{musicDetail.music_compose}}</text> <text>填词：{{musicDetail.music_writer}}</text></view>
+    <view class='content-item'>类型：{{musicDetail.cs_name}}</view>
+  
+  </view>
+
+
+</view>
+
+<!--价格-->
+<view class='music-price'>
+
+  <view class='music-about-title'>
+    <view class='common-box'>
+      <view class='title-name price-title'>单片会员价</view>
+    </view>
+  </view>
+
+  <view class='music-price-info'>￥<text>{{musicDetail.price_int}}</text>.{{musicDetail.price_dec}}</view>
+
+  <view class='music-opts'>
+  
+    <view class='options'>
+        <view class='download'>
+          <image src='{{host}}source/static/ico/download.png' class='fl'></image>
+          <text class='fl'>下载</text>
+        </view>
+        <view class='play' bindtap='play'>
+          <image src='{{host}}source/static/ico/play.png' class='fl'></image>
+          <text class='fl'>播放</text>
+        </view>
+         <view class='play' bindtap='pause'>
+          <image src='{{host}}source/static/ico/play.png' class='fl'></image>
+          <text class='fl'>暂停</text>
+        </view>
+         <view class='play' bindtap='stop'>
+          <image src='{{host}}source/static/ico/play.png' class='fl'></image>
+          <text class='fl'>停止</text>
+        </view>
+        <view class='favorite'>
+          <image src='{{host}}source/static/ico/collect.png' class='fl'></image>
+          <text class='fl'>收藏</text>
+        </view>
+       
+      </view>
+
+  </view>
+
+</view>
+
+
+<!--歌词-->
+<view class='music-words'>
+
+  <view class='music-about-title'>
+    <view class='common-box'>
+      <view class='title-name words-title'>歌词</view>
+    </view>
+  </view>
+
+  <view class='music-words-content'>
+    <rich-text nodes="{{musicDetail.music_lyric}}" bindtap="tap"></rich-text>
+  </view>
+
+</view>
+
+<!--评论-->
+<view class='music-recommend'>
+
+   <view class='pl whitebg'>
+    <view class='pl-title'>
+      <view class='common-box'>
+        <view class='pl-title-name'>商品评论</view>
+      </view>
+    </view>
+    <view class='pl-list'>
+
+
+
+      <view class='pl-list-item'>
+        <view class='pl-list-item-box'>
+          <view class='pl-header'>
+
+            <view class='pl-header-photo'><image mode='aspectFill' src='{{host}}source/static/images/temp4.jpg'></image></view>
+
+            <view class='pl-header-ns'>
+              <view class='user-name'>张**（匿名）</view>
+              <view class='stars'><star nums="3"></star></view>
+            </view>
+
+          </view>
+          <view class='pl-content'>
+            译者把它翻译的很适合中国人阅读，所以读起来很舒服，这本书很适合职场人士的阅读，学习很多，是一本不可多得的好书。
+          </view>
+        </view>
+      </view>
+
+
+      <view class='pl-list-item'>
+        <view class='pl-list-item-box'>
+          <view class='pl-header'>
+
+            <view class='pl-header-photo'><image mode='aspectFill' src='{{host}}source/static/images/temp4.jpg'></image></view>
+
+            <view class='pl-header-ns'>
+              <view class='user-name'>张**（匿名）</view>
+              <view class='stars'><star nums="3"></star></view>
+            </view>
+
+          </view>
+          <view class='pl-content'>
+            译者把它翻译的很适合中国人阅读，所以读起来很舒服，这本书很适合职场人士的阅读，学习很多，是一本不可多得的好书。
+          </view>
+        </view>
+      </view>
+
+
+
+      <view class='pl-list-item'>
+        <view class='pl-list-item-box'>
+          <view class='pl-header'>
+
+            <view class='pl-header-photo'><image mode='aspectFill' src='{{host}}source/static/images/temp4.jpg'></image></view>
+
+            <view class='pl-header-ns'>
+              <view class='user-name'>张**（匿名）</view>
+              <view class='stars'><star nums="3"></star></view>
+            </view>
+
+          </view>
+          <view class='pl-content'>
+            译者把它翻译的很适合中国人阅读，所以读起来很舒服，这本书很适合职场人士的阅读，学习很多，是一本不可多得的好书。
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+
+</view>
+
+
+<!--底部-->
+<view class='music-footer'>
+
+
+<view style='height:100rpx;'></view>
+
+  <view class='footer whitebg'>
+
+    <view class='footer-opts' style='background:#FFF;'>
+    
+      <view class='footer-opts-home' bindtap='goToHome'>
+        <image src='{{host}}source/static/ico/tabbar_home_gray.png'></image>
+        <text>首页</text>
+      </view>
+      <view class='footer-opts-share'>
+       <image mode='aspectFill' src='{{host}}source/static/ico/share.png'></image>
+        <text>分享</text>
+      </view>
+      <view class='footer-opts-cart' bindtap='goToCart'>
+      
+        <image mode='aspectFill' src='{{host}}source/static/ico/tabbar_cart_gray.png'></image>
+        <text>购物车</text>
+        <view class='current-nums'>{{currentCartCount}}</view>
+        
+      </view>
+    
+    </view>
+    <view class='footer-buynow'>立即购买</view>
+    <view class='footer-cart' bindtap='addToCart'>加入购物车</view>
+  
+  </view>
+
+</view>
+
+
+</view>

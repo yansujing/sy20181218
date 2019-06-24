@@ -1,0 +1,106 @@
+/* pages/order/order.wxss */
+
+.border {
+  height: 10rpx;
+  background: #fff url('https://www.fuhushi.com/source/static/ico/border.gif') repeat-x;
+  background-size: 105rpx 10rpx;
+}
+
+.receiver {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 28rpx;
+}
+
+.receiver-name {
+  display: flex;
+  align-items: center;
+}
+
+.receiver-name image {
+  width: 20rpx;
+  height: 28rpx;
+}
+
+.receiver-name text, .tel {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-left: 10rpx;
+  color: #000;
+}
+
+.address {
+  color: #666;
+  font-size: 23rpx;
+  padding: 0 24rpx 43rpx 50rpx;
+}
+
+.products {
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.p-title {
+  border-bottom: #dbdbdb 1px solid;
+  display: flex;
+  align-items: center;
+  padding-top: 36rpx;
+  padding-bottom: 13rpx;
+}
+
+.p-title image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.p-title text {
+  font-size: 26rpx;
+  color: #000;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+
+.p-content image {
+  width: 96rpx;
+  height: 122rpx;
+  margin: 20rpx 10rpx;
+}
+
+.p-count {
+  font-size: 26rpx;
+  color: #000;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 24rpx 10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.opts{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding:60rpx 25rpx 50rpx;
+}
+.opts text:first-child{
+  font-size: 26rpx;
+  color: #666666;
+  margin-right: 30rpx;
+
+}
+.opts text:nth-child(2){
+  color: #E53E30;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-right: 30rpx;
+}
+.opts button{
+  margin: 0;
+  width: 188rpx;
+  height: 76rpx;
+  background: #E53E30;
+  font-size: 26rpx;
+  color: #FFF;
+  text-align: center;
+  line-height: 76rpx;
+  border-radius: 0;
+}

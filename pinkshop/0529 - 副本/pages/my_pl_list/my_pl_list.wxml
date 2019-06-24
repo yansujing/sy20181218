@@ -1,0 +1,16 @@
+<view class='pl-list-container'>
+
+  <block wx:for='{{plData}}' wx:key='{{index}}'>
+    <view class='pl-list-item whitebg'>
+      <view class='pl-box'>
+        <view class='pl-title'>{{item.pname}}</view>
+        <view class='pl-content'>{{item.commend_content}}</view>
+        <view class='pl-opts'>
+          <button class='edit' data-mcid='{{item.mcid}}' data-pid='{{item.pid}}' data-pname='{{item.pname}}' data-stars='{{item.stars}}' bindtap='edit' data-commend='{{item.commend_content}}'>编辑</button>
+          <button class='del' bindtap='del' id='{{item.id}}'>删除</button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

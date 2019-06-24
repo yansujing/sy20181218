@@ -1,0 +1,60 @@
+/* pages/list_movie/list_movie.wxss */
+
+.nav-box {
+  padding: 24rpx;
+}
+
+.nav-item-title {
+  height: 28rpx;
+  line-height: 28rpx;
+
+  color: #4F4F4F;
+  font-size: 24rpx;
+
+  border-left: #FF0000 5rpx solid;
+
+  padding-left: 10rpx;
+
+  margin-bottom: 10rpx;
+}
+
+.nav-item-body {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 6rpx;
+}
+
+.nav-list-item {
+  color: #999;
+  font-size: 20rpx;
+
+  border: #CCC 1px solid;
+  padding: 5rpx 20rpx;
+
+  margin: 6rpx;
+
+  border-radius: 14rpx;
+}
+
+.nav-item-body .active {
+  color: #FF0000;
+  border: #FF0000 1px solid;
+}
+
+.where {
+  border-left: #99CC00 5rpx solid;
+}
+
+.all-country {
+  margin-top: 30rpx;
+}
+
+.all-country .active {
+  color: #99CC00;
+  border: #99CC00 1px solid;
+}
+
+
+.movie-list {
+  border-top: #E4E4E4 1px solid;
+}

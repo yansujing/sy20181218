@@ -1,0 +1,95 @@
+page {
+  background: #f1f1f1;
+}
+
+/* ***************摘自list_music**************** */
+
+.music-list-item {
+  margin-bottom: 40rpx;
+}
+
+.music-box {
+  padding: 34rpx 28rpx;
+  display: flex;
+}
+
+.music-box-left image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.music-box-right {
+  margin-left: 27rpx;
+}
+
+.music-box-right .title {
+  color: #000;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.music-box-right .about {
+  color: #666;
+  font-size: 23rpx;
+}
+
+.price {
+  color: #e43728;
+}
+
+.st {
+  height: 23rpx;
+  display: flex;
+  align-items: center;
+}
+
+.st text {
+  font-size: 20rpx;
+  color: #a7a7a7;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+.options {
+  display: flex;
+  font-size: 20rpx;
+  margin-top: 25rpx;
+}
+
+.options view {
+  width: 95rpx;
+  height: 34rpx;
+  overflow: hidden;
+  border: #099 1px solid;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  /* text-align: center;
+  line-height: 34rpx; */
+  color: #099;
+}
+
+.options view:nth-child(2) {
+  border: #f33 1px solid;
+  color: #f33;
+}
+
+.options view:nth-child(3) {
+  border: #936 1px solid;
+  color: #936;
+}
+
+.options view:nth-child(4) {
+  border: #f60 1px solid;
+  color: #f60;
+}
+
+.options image {
+  width: 23rpx;
+  height: 23rpx;
+  margin-top: 7rpx;
+  margin-left: 10rpx;
+}
+
+.options text {
+  margin: 5rpx 0 0 5rpx;
+}

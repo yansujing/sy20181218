@@ -1,0 +1,10 @@
+<!-- 搜索组件 -->
+
+<view class='search'>
+
+  <view class='search-box' style='background-color:#{{bgcolor}}'>
+    <image src='{{host}}source/static/ico/search.png' mode='aspectFill' class='search-box-ico'></image>
+    <text>{{text}}</text>
+  </view>
+
+</view>

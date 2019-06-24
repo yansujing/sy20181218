@@ -1,0 +1,174 @@
+/* pages/detail_music/detail_music.wxss */
+
+.title-name {
+  font-size: 26rpx;
+  color: #333;
+
+  height: 30rpx;
+  line-height: 30rpx;
+
+  border-left: #FF0000 5rpx solid;
+
+  padding-left: 10rpx;
+}
+
+.panel-box {
+  width: 675rpx;
+  height: 150rpx;
+  background: #FCFCFC;
+
+  margin: 23rpx auto;
+
+  border: #DCDCDC 1px solid;
+  border-radius: 10rpx;
+
+  position: relative;
+}
+
+.poster {
+  width: 146rpx;
+  height: 146rpx;
+  margin: 2rpx;
+  border-radius: 10rpx;
+}
+
+.btn-play {
+  width: 56rpx;
+  height: 56rpx;
+  position: absolute;
+  left: 45rpx;
+  top: 45rpx;
+}
+
+.music-info {
+  position: absolute;
+  width: 400rpx;
+  height: 100rpx;
+
+  left: 160rpx;
+  top: 20rpx;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.music-name {
+  font-size: 30rpx;
+  margin: 10rpx 0;
+}
+
+.music-singer {
+  font-size: 20rpx;
+}
+
+.music-time {
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+  font-size: 25rpx;
+}
+
+.content-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 20rpx;
+  color: #333;
+
+  border-bottom: #EAEAEA 1px solid;
+
+  padding-left: 40rpx;
+}
+
+.content-item:nth-child(2) text {
+  margin-right: 30rpx;
+}
+
+.price-title {
+ border-left: #6699CC 5rpx solid;
+}
+
+.music-price {
+  padding-top: 20rpx;
+}
+
+.music-price-info {
+
+  font-size: 24rpx;
+
+  padding-left: 46rpx;
+
+  margin: 10rpx 0;
+
+  color: #E43728;
+}
+
+.music-opts {
+  padding-left: 46rpx;
+}
+
+.options {
+  display: flex;
+
+  font-size: 20rpx;
+  margin-top: 20rpx;
+
+}
+
+.options view {
+  width: 95rpx;
+  height: 34rpx;
+  overflow: hidden;
+  border: #009999 1px solid;
+  border-radius: 30rpx;
+  color: #009999;
+  margin-right: 10rpx;
+}
+
+.options view:nth-child(2){
+  border: #FF3333 1px solid;
+  color: #FF3333;
+}
+
+.options view:nth-child(3){
+  border: #993366 1px solid;
+  color: #993366;
+}
+
+.options view:nth-child(4){
+  border: #FF6600 1px solid;
+  color: #FF6600;
+}
+
+.options image {
+  width: 23rpx;
+  height: 23rpx;
+
+  margin-top: 6rpx;
+  margin-left: 10rpx;
+}
+
+.options text {
+  margin-left: 5rpx;
+  margin-top: 3rpx;
+}
+
+.words-title {
+
+  border-left: #9966CC 5rpx solid;
+}
+
+.music-words {
+  padding-top: 20rpx;
+}
+
+.music-words-content {
+
+  padding-left: 46rpx;
+  padding-right: 20rpx;
+  font-size: 20rpx;
+  color: #333;
+  line-height: 35rpx;
+
+
+}

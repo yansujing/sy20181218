@@ -1,0 +1,102 @@
+<view class='list-book-container'>
+
+  <!--------------------------------------------- 搜索 ------------------------------------------------->
+  <search bindtap='search' bgcolor='D2FFFF' text='搜索图书商品'></search>
+
+  <!--------------------------------------------- 菜单 ------------------------------------------------->
+  <view class='nav'>
+    <view class='nav-box'>
+      <view class='nav-item {{active_health}}' bindtap='goToBookList' id=' {{bookClass[0].id}}' data-tag='{{bookClass[0].cs_name}}'>{{bookClass[0].cs_name}}</view>
+      <view class='nav-item {{active_culture}}' bindtap='goToBookList' id=' {{bookClass[1].id}}' data-tag='{{bookClass[1].cs_name}}'>{{bookClass[1].cs_name}}</view>
+      <view class='nav-item {{active_people}}' bindtap='goToBookList' id=' {{bookClass[2].id}}' data-tag='{{bookClass[2].cs_name}}'>{{bookClass[2].cs_name}}</view>
+      <view class='nav-item {{active_child}}' bindtap='goToBookList' id=' {{bookClass[3].id}}' data-tag='{{bookClass[3].cs_name}}'>{{bookClass[3].cs_name}}</view>
+    </view>
+    <view class='nav-box'>
+      <view class='nav-item {{active_tec}}' bindtap='goToBookList' id=' {{bookClass[4].id}}' data-tag='{{bookClass[4].cs_name}}'>{{bookClass[4].cs_name}}</view>
+      <view class='nav-item {{active_hotsale}}'>热销图书</view>
+      <view class='nav-item {{active_99}}' bindtap='goToBookList' id='99' data-tag='9.9包邮'>9.9包邮</view>
+      <view class='nav-item {{active_newbook}}' bindtap='goToBookList' id='111' data-tag='newbook'>新书上架</view>
+    </view>
+  </view>
+
+
+  <!--------------------------------------------- 列表 ------------------------------------------------->
+  <view class='list'>
+
+    <block wx:if='{{!hasData}}'>
+      <view>暂无数据！！！</view>
+    </block>
+
+    <block wx:else>
+      <block wx:for='{{dataList}}' wx:key='{{index}}'>
+        <view class='list-item' bindtap='goToBookDetail' id='{{item.id}}' data-mcid='{{item.mcid}}'>
+          <view class='list-item-left'>
+            <image mode='aspectFill' src='{{myhost}}{{item.poster}}'></image>
+          </view>
+          <view class='list-item-right'>
+            <view class='title'>
+              {{item.book_name}}
+            </view>
+            <view class='author'>作者：{{item.book_autor}}</view>
+            <view class='publicer'>出版社：{{item.book_public}}</view>
+            <view class='public-date'>出版日期：{{item.book_dt}}</view>
+            <view class='descript'>{{item.descript}}</view>
+            <view class='price'>
+              ¥
+              <text class='price_int'>{{item.price_int}}</text>.{{item.price_dec}}
+            </view>
+            <view class='recommend '>
+              <star nums="{{item.stars}}"></star>
+              <text>{{item.remmendNums}}条评论</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <!-- <view class='list-item'>
+      <view class='list-item-left'>
+        <image mode='aspectFill' src='{{host}}source/static/images/temp2.jpg'></image>
+      </view>
+      <view class='list-item-right'>
+        <view class='title'>
+          打发奥付所多多多多多多多多多多多多多多多多多
+        </view>
+        <view class='author'>大阿斯蒂芬</view>
+        <view class='publicer'>大发放</view>
+        <view class='public-date'>大发放</view>
+        <view class='descript'>打法对方</view>
+        <view class='price'>
+          ¥
+          <text class='price_int'>44</text>.38
+        </view>
+        <view class='recommend '>
+          <star nums="4"></star>
+          <text>155条评论</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='list-item'>
+      <view class='list-item-left'>
+        <image mode='aspectFill' src='{{host}}source/static/images/temp2.jpg'></image>
+      </view>
+      <view class='list-item-right'>
+        <view class='title'>
+          打发奥付所多多多多多多多多多多多多多多多多多
+        </view>
+        <view class='author'>大阿斯蒂芬</view>
+        <view class='publicer'>大发放</view>
+        <view class='public-date'>大发放</view>
+        <view class='descript'>打法对方</view>
+        <view class='price'>
+          ¥
+          <text class='price_int'>44</text>.38
+        </view>
+        <view class='recommend '>
+          <star nums="4"></star>
+          <text>155条评论</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>

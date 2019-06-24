@@ -1,0 +1,11 @@
+/* components/stars/stars.wxss */
+
+.stars image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.stars image:first-child {
+  margin-left: 0rpx;
+}

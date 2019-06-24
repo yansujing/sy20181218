@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/list_book/list_book",
+    "pages/order/order",
+    "pages/my_info/my_info",
+    "pages/my_pl_history/my_pl_history",
+    "pages/my_pl_edit/my_pl_edit",
+    "pages/my_pl_add/my_pl_add",
+    "pages/my_pl_list/my_pl_list",
+    "pages/my_order/my_order",
+    "pages/my_collect/my_collect",
+    "pages/scan/scan",
+    "pages/cart/cart",
+    "pages/detail_music/detail_music",
+    "pages/detail_movie/detail_movie",
+    "pages/detail_book/detail_book",
+    "pages/list_music/list_music",
+    "pages/list_movie/list_movie",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FF4444",
+    "backgroundColor": "#F7F7FA",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/icon/tabbar_home_gray.png",
+        "selectedIconPath": "static/icon/tabbar_home.png"
+      },
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "扫码",
+        "iconPath": "static/icon/tabbar_scan_gray.png",
+        "selectedIconPath": "static/icon/tabbar_scan.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/icon/tabbar_cart_gray.png",
+        "selectedIconPath": "static/icon/tabbar_cart.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/icon/tabbar_my_gray.png",
+        "selectedIconPath": "static/icon/tabbar_my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

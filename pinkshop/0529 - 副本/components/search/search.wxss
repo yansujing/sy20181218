@@ -1,0 +1,53 @@
+/* 搜索注释 */
+
+.search .search-box {
+  width: 730rpx;
+  height: 57rpx;
+  margin: 0 auto;
+  border-radius: 20px;
+  line-height: 57rpx;
+  color: #b2b1b1;
+  font-size: 25rpx;
+}
+
+.search .search-box .search-box-ico {
+  float: left;
+  width: 27rpx;
+  height: 27rpx;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+
+.search .search-box text {
+  float: left;
+  margin-top: -1rpx;
+  margin-left: 12rpx;
+}
+
+/* 搜索注释 */
+
+.search .search-box {
+  /* background-color: #DEF2FC; */
+  width: 730rpx;
+  height: 57rpx;
+  margin: 0 auto;
+  border-radius: 20px;
+  line-height: 57rpx;
+  color: #b2b1b1;
+  font-size: 25rpx;
+}
+
+.search .search-box .search-box-ico {
+  float: left;
+  width: 27rpx;
+  height: 27rpx;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+
+.search .search-box text {
+  float: left;
+  margin-top: -1rpx;
+  margin-left: 12rpx;
+}
+

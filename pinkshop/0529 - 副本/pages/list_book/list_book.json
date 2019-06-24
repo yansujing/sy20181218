@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "star": "../../components/stars/stars"
+  },
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "图书分类"
+}
