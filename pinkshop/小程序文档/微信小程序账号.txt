@@ -1,0 +1,14 @@
+AppID(小程序ID)：wx3a2f0e98330e2f32
+
+小程序秘钥：200e452efc4f2f47026413b847e28dea
+
+注册邮箱：yansujing1111@163.com
+
+密码：YSJ170523
+
+域名：www.fuhushi.com
+
+FTP账号：nanxi1111
+FTP密码：syedu20190610
+上传地址：nanxi1111.gotoftp5.com
+

@@ -1,0 +1,5 @@
+mysql的地址为：	localhost (推荐)， 远程连接时使用域名:sql.z3.vhostgo.com
+数据库名为：	nanxi1111
+用户名：	nanxi1111
+
+密码：nanxi1111.gotoftp5.com

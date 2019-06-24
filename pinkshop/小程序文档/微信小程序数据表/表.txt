@@ -1,0 +1,233 @@
+处理的项目：图书、音乐、电影、会员、评论、订单、收藏、管理员、快讯
+
+-----------------------------------------------------------------------------------------------
+
+表1：图书表（xieming_book）
+
+字段名称          类型           长度      默认值    说明            备注
+
+id                middleint       8                   ID             主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID      索引，无符号
+
+scid              tinyint         2                   二级分类ID      索引，无符号
+
+book_name         varchar         30                  图书名称
+
+book_autor        varchar         30                  作者
+ 
+book_public       varchar         20                  出版社
+
+book_price        decimal         6,2                 价格             无符号
+
+book_99           tinyint         1          0        9.9包邮          无符号
+
+book_recommend    tinyint         1          0        推荐             无符号
+
+book_desript      text                                描述
+
+book_dt           int             11                  上架日期          无符号
+
+-----------------------------------------------------------------------------------------------
+
+表2：一级分类表（xieming_catagory_main）
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                tinyint         2                     ID            主键，自动增量，无符号
+
+cm_name           char            5                     分类名称
+
+
+-----------------------------------------------------------------------------------------------
+
+表3：二级分类表（xieming_catagory_sub）
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                tinyint         2                     ID            主键，自动增量，无符号
+
+pid               tinyint         2                     父类ID        索引
+
+cs_name           varchar         10                    二级分类名称
+
+            
+-----------------------------------------------------------------------------------------------
+
+表4：封面表(xieming_poster)
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                int             10                   ID            主键，自动增量，无符号
+
+pid               middleint       8                    产品ID         无符号
+
+mcid              tinyint         2                    一级分类ID      无符号
+
+scid              tinyint         2                    二级分类ID      索引 无符号
+
+url               char            50                    封面图片地址   
+
+-----------------------------------------------------------------------------------------------
+
+表5：音乐表（xieming_music）
+
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                smallint        6                      ID             主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID        索引，无符号
+
+scid              tinyint         2                   二级分类ID        索引，无符号
+
+music_singer      varchar         15                  歌手            
+
+music_title       varchar         20                  歌名
+
+music_compose     varchar         15                  作曲
+
+music_writer      varchar         15                  作词
+
+music_Lyric       text                                 歌词
+
+music_price       decimal         6,2                  价格
+
+music_url         char            50                   音乐地址        只上传音乐地址
+
+music_dt          int	           11                  上架日期
+
+-----------------------------------------------------------------------------------------------
+
+表6：电影表（xieming_movie）
+
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                smallint        6                      ID             主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID        索引，无符号
+
+scid              tinyint         2                   二级分类ID        索引，无符号
+
+movie_name        varchar         30                  电影名称          
+
+movie_dirctor     varchar         15                   导演
+
+movie_roles       varchar         50                   主要演员
+
+movie_country     varchar         15                    国家
+
+movie_long        char            5                     时长
+
+movie_price       decimal         6,2                   价格
+
+movie_url         char            40                    影片地址
+
+movie_descript    text                                  影片简介
+
+movie_dt           int             11                   上架日期
+
+-----------------------------------------------------------------------------------------------
+
+表7：评论表（xieming_commend）
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                int            11                      ID             主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID        索引，无符号
+
+scid              tinyint         2                   二级分类ID        索引，无符号
+
+openid            char            50                  openid
+
+pid               middleint       8                   产品ID            索引
+        
+commend_who       smallid         6                   评论者ID
+
+commend_stars     tinyint         2                   星数               无符号
+
+commend_content   text            200                 评论内容
+
+commend_date      int             11                  评论日期           无符号
+
+
+-----------------------------------------------------------------------------------------------
+
+表8：用户名表（xieming_user）
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                smallint        6                    ID            主键，自动增量，无符号
+
+openid            char            50                   小程序获取OPENID  索引
+
+user_name         varchar         15                   姓名
+
+user_mobile       char            15                   手机号码
+
+user_address      varchar         150                  收货地址
+
+user_post         char            10                   邮编
+
+user_header       char            50                   头像地址
+
+user_date         int             11                    注册日期
+
+
+-----------------------------------------------------------------------------------------------
+
+表9：订单表（xieming_order）
+
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                smallint        6                    ID            主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID        无符号
+
+scid              tinyint         2                   二级分类ID        无符号
+
+pid               middleint       8                   产品ID            索引,无符号
+
+openid            char            50                  openid            索引,无符号
+
+uid               smallint       6                    用户ID            索引,无符号
+
+order_count       middleint      8                   购买数量
+
+order_date        int            11                  下单日期
+
+-----------------------------------------------------------------------------------------------
+
+表10：收藏表（xieming_collect）
+
+id                smallint        6                    ID            主键，自动增量，无符号
+
+mcid              tinyint         2                   一级分类ID        无符号
+
+scid              tinyint         2                   二级分类ID        无符号
+
+pid               middleint       8                   产品ID            索引,无符号
+
+openid            char            50                  openid            索引,无符号
+
+uid               smallint       6                    用户ID            无符号
+
+collect_date      int            11                   收藏日期     
+
+
+-----------------------------------------------------------------------------------------------
+
+表11：管理员（xieming_admin）
+
+字段名称          类型           长度      默认值      说明           备注
+
+id                tinyint        2                    ID            主键，自动增量，无符号
+
+admin_username    varchar        15                   用户名
+
+admin_pwd         char           45                   密码         哈希加密取35位
+
+
