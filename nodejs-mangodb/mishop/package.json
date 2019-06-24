@@ -1,0 +1,28 @@
+{
+  "name": "0515",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "art-template": "^4.13.2",
+    "cors": "^2.8.5",
+    "koa": "^2.7.0",
+    "koa-art-template": "^1.1.1",
+    "koa-body": "^4.1.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.11.0",
+    "koa-static": "^5.0.0",
+    "mongodb": "^3.2.4",
+    "nodejs-base64": "^1.0.3",
+    "nodemon": "^1.19.0",
+    "sha1": "^1.1.1"
+  }
+}

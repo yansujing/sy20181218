@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mishop后台管理系统</title>
+    <!-- 引入ui -->
+    <link rel="stylesheet" href="../layui/layui/css/layui.css" />
+    <script src="../layui/layui/layui.js"></script>
+    <script src="../js/wangEditor.min.js"></script>
+
+    <!-- 引入jQuery库 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+    }
+    #container{
+        width:1200px;
+        height:100%;
+        margin:0 auto;
+    }
+    .nav,.show{
+        float:left;
+    }
+
+    .header{
+        background-color:#ccc;
+        height:60px;
+        line-height:60px;
+    }
+
+    .nav{
+        width:200px;
+        min-height:560px;
+        margin-right:20px;
+        background-color:#666;
+        text-align:center;
+    }
+
+    .nav a{
+        display:block;
+        text-decoration:none;
+        height:60px;
+        line-height:60px;
+        border-bottom:1px solid #ccc;
+        color:#000;
+    }
+    .nav a:hover{
+        color:red;
+    }
+    .show{
+        width:980px;
+    }
+
+    .addnew{
+        width:100%;
+        display:block;
+        height:60px;
+        line-height:60px;
+        text-align:right;
+        padding-right:10px;
+        border-bottom:1px solid #ccc;
+        
+    }
+    .addnew a{
+        background-color:#009688;
+        padding:10px;
+        border-radius:5px;
+        text-decoration:none;
+        color:white;
+    }
+
+    .add-box,.list-box{
+        padding-top:20px;
+    }
+
+    h2{
+        color:red;
+        padding:0px 0px 20px 50px;
+    }
+    .pagination{
+        text-align: center !important;
+    }
+
+    .pagination a{
+        margin:0 10px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id='container'>
+
+        <div class='header'>头部</div>
+        <div class='main'>
+
+            <div class='nav'>
+
+                <%- menu %>
+
+            </div>
+            <div class='show'>
+
+
+
+
+                <div class='list-body'>
+                    <h2>产品管理</h2>
+                    <p class='addnew'><a href='product_add'>新增项目</a></p>
+
+
+                    <div class='item-list'>
+
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width='80'>
+                                <col width="80">
+                                <col width='150'>
+                                <col width="80">
+                                <col width='100'>
+                                <col width='200'>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name='selectAll' id='selectAll'></th>
+                                    <th>ID</th>
+                                    <th>分类名称</th>
+                                    <th>产品名称</th>
+                                    <th>价格</th>
+                                    <th>上架日期</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {{each allDatas}}
+
+                                <tr>
+                                    <th><input type="checkbox" name="selectItem" id="select" value="{{@ $value._id}}"></th>
+                                    <th>{{@ $value._id}}</th>
+                                    <th>{{$value.cid}},{{$value.cname}}</th>
+                                    <th>{{$value.title}}</th>
+                                    <th>{{$value.price}}</th>
+                                    <th>{{$value.dt}}</th>
+                                    <th><a href="product_view?id={{@ $value._id}}">浏览</a> | <a href="product_update?id={{@ $value._id}}">修改</a>
+                                        | <a href="javascript:void(0)" class="del" name="{{@ $value._id}}">删除</a></th>
+                                </tr>
+
+                                {{/each}}
+                                <tr>
+                                    <th colspan="7" class="pagination"><a href="javascript:void(0)" id="deleteSelected"
+                                            style="float:left;margin-left:-10px;">删除所选</a>{{@ pagination}}</th>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <script>
+
+                    $(function () {
+
+                        // $(".delete").click(function(){
+
+                        //     var that_=$(this);
+
+                        //     layui.use('layer', function(){
+                        //         var layer = layui.layer;
+
+                        //         layer.confirm('您确定要删除吗？', 
+                        //             {
+                        //                 btn: ['确定','取消'] //按钮
+                        //             }, 
+                        //             function(){
+                        //                 var id=that_.attr('name');
+                        //                 // console.log(id);
+
+                        //                 window.location.href='main.php?go=class_delete&id='+id;
+                        //             }, 
+                        //             function(){
+
+                        //             }
+                        //         );
+                        //     });   
+
+                        // })
+
+                        // 删除
+                        $(".del").click(function () {
+                            var that_ = $(this);
+
+                            layui.use('layer', function () {
+                                var layer = layui.layer;
+
+                                layer.confirm('您确定要删除吗？',
+                                    {
+                                        btn: ['确定', '取消'] //按钮
+                                    },
+                                    function () {
+                                        var id = that_.attr('name');
+                                        // console.log(id);
+
+                                        window.location.href = 'product_delete?id=' + id;
+                                    },
+                                    function () {
+
+                                    }
+                                );
+                            });
+                        })
+
+                        // 全选
+                        $("#selectAll").click(function () {
+
+                            if ($(this).is(":checked")) {
+                                console.log(222);
+                                $("input[name='selectItem']").attr("checked", "checked");
+                            } else {
+                                $("input[name='selectItem']").removeAttr("checked")
+                            }
+
+
+                        })
+
+                        $("#deleteSelected").click(function () {
+
+                            console.log(222);
+                            let tempArr=[];
+                            // 收集所选项目的id
+                            $("input[name='selectItem']:checked").each(function () {
+
+                                // console.log($(this).val());
+                                tempArr.push($(this).val());
+
+                            })
+
+                            let str=JSON.stringify(tempArr);
+
+                            // base64编码
+                            let base64=window.btoa(str);
+
+                            // 删除所选路由
+                            window.location.href="product_delete_selected?ids="+base64;
+                        })
+
+                
+
+                    })
+
+    // const a=34;
+    // const a=31;
+    // console.log(a);
+
+                </script>
+
+
+</body>
+
+</html>
