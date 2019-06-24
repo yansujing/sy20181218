@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue提示框指令</title>
+    <style>
+        p {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 40px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <p>
+            我是内容我是内容我是内容我是内容我是内容我是内容我是内<a v-tip:left='tip1' href="https://www.baidu.com">百度</a>
+            容我是<a v-tip:right='tip2' href="https://www.163.com/">网易</a>内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内
+            容我是内容我是内容我是内容我是内容我是<a v-tip:top='tip3' href="https://www.sina.com.cn/">新浪</a>内容<a v-tip:bottom='tip4'
+                href="https://weibo.com/">微博</a>我是内容我是内容我是内容我是内容我是内
+            容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内
+            容我是内容我是内容我是内容
+        </p>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

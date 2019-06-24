@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!-- 下面的一行代码可以让网页的宽度自动适应手机屏幕的宽度 ,但在iOS9中要想起作用，得加上"shrink-to-fit=no"-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- 以下代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面 -->
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>bootstrap网格系统</title>
+	<link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	<link href="./css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<!-- bootstrap网格系统：用于创建各种尺寸的响应式布局 -->
+	<!-- 原理：将页面每一行（row）分为12列（col），为这些列创建媒体查询 -->
+
+
+	<!-- 创建网格系统需要3个要素 -->
+	<!-- 1.网格系统的容器（.container,.container-fluid） -->
+	<!--.container:固定宽度的布局  -->
+	<!--.container-fluid:流式布局（百分比布局）-->
+
+	<!-- 2.定义行（.row） -->
+	<!-- 3.定义行中的列(.col) -->
+	<!-- .col: 针对所有屏幕大小-->
+	<!-- .col-sm:针对屏幕宽度大于等于 576px -->
+	<!-- .col-md:针对屏幕宽度大于等于 768px -->
+	<!-- .col-lg:针对屏幕宽度大于等于 992px -->
+	<!-- .col-xl:针对屏幕宽度大于等于 1200px -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+		<div class="row align-items-end">
+			<div class="col-sm-3 col-md-6 col-lg-8"></div>
+			<div class="col-sm-4 col-md-6 col-lg-4"></div>
+			<div class="col-sm-5 col-lg-4"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-sm-3 col-md-6 col-lg-8"></div>
+			<div class="col-sm-4 col-md-6 col-lg-4"></div>
+			<div class="col-sm-5 col-lg-4"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="./js/jquery.3.3.1.js"></script>
+	<script src="./js/bootstrap/bootstrap.bundle.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

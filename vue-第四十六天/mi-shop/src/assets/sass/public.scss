@@ -1,0 +1,90 @@
+#app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #666;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: $headerHeight;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: $headerHeight 0 $footerHeight 0;
+    overflow: auto;
+}
+
+.ui-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.ui-flex.wrap {
+    flex-wrap: wrap;
+}
+
+.ui-flex.justify-end {
+    justify-content: flex-end;
+}
+
+.ui-flex.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.fl {
+    float: left;
+    width: pxToVw(20);
+}
+
+.fr {
+    float: right;
+}
+
+.ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.height-100 {
+    height: 100vh;
+}
+
+.margin-top-8{
+    margin-top: pxToVw(8);
+}
+
+.padding-top-8{
+    padding-top: pxToVw(8);
+}
+
+.my-bullet-active {
+    background-color: #ff6700 !important;
+    opacity: 1 !important;
+}

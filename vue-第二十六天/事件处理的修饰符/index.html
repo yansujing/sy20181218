@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>事件处理的修饰符</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- v-on(@)修饰符 -->
+		<!-- 按键修饰符 -->
+		<!-- enter（13），tab，page-down -->
+		<input type="text" @keydown.13='fn' />
+		<p>{{count}}</p>
+		<!-- 组合键 -->
+		<!-- ctrl,alt,shift,meta -->
+		<button @click.ctrl='fn'>按钮1</button>
+		<!-- middle，right -->
+		<button @click.middle='fn'>按钮2</button>
+		<button @click.right='fn'>按钮3</button>
+
+		<!-- exact:精确控制组合触发的事件 -->
+		<button @click.exact='fn'>按钮4</button>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

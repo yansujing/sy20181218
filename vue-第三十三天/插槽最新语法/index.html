@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>插槽最新语法</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<!-- 
+		<template v-if='flag'>
+			<h1>我是标题</h1>
+			<p>我是内容</p>
+		</template> -->
+
+
+		<!-- 插槽的名字通过 v-slot:插槽的名字 这种形式来使用 -->
+		<!-- v-slot 只能添加到 <template> 或自定义组件上，这点与弃用的 slot 属性不同 -->
+		<!-- template元素：可以作为其他元素的包裹容器，最后不会被渲染出来的 -->
+
+		<app-title>
+
+			<template v-slot:header='{user}'>
+				{{user}}
+				<h1>Here might be a page title</h1>
+			</template>
+
+			<template v-slot:default>
+				<p>A paragraph for the main content.</p>
+				<p>And another one.</p>
+			</template>
+
+			<!-- v-slot的缩写（只有在提供参数时才能使用简写形式） -->
+			<template #footer>
+				<p>Here's some contact info</p>
+			</template>
+
+		</app-title>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

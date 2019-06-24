@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>动态路由匹配(命名路由)</title>
+    <style>
+        .router-link-exact-active,
+        .router-link-active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <ul>
+            <li>
+                <router-link to='/detail/123/steel?abc=123&bcd=aaa'>详情1</router-link>
+            </li>
+            <li>
+                <router-link :to='{name:"detail",params:{id:"345",name:"hello"},query:{bcd:"abc"}}'>详情2</router-link>
+            </li>
+            <li>
+                <router-link :to='{name:"detail",params:{id:"456",name:"world"}}'>详情3</router-link>
+            </li>
+        </ul>
+
+        <router-view></router-view>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

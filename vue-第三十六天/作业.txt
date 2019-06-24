@@ -1,0 +1,10 @@
+
+
+作业：
+
+  1.写一个 ’图片占位‘指令
+
+预习 
+
+  1.插件 https://cn.vuejs.org/v2/guide/plugins.html
+  2.过滤器 https://cn.vuejs.org/v2/guide/filters.html

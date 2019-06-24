@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Vue-计算属性</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- 模板中不应该有太多的处理逻辑 -->
+		<h1>{{reverseMsg}}</h1>
+		<h2>{{reverseMsg}}</h2>
+		<h3>{{reverseMsg}}</h3>
+
+
+		<h1>{{reverseMsgFn()}}</h1>
+		<h2>{{reverseMsgFn()}}</h2>
+		<h3>{{reverseMsgFn()}}</h3>
+
+	</div>
+
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

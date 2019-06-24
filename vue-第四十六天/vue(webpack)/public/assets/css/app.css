@@ -1,0 +1,155 @@
+#app {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.order {
+    width: 407px;
+    height: calc(100vh - (10px));
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.product {
+    width: 773px;
+    height: calc(100vh - (10px));
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.bar-title {
+    font-size: 18px;
+    color: grey;
+}
+
+.tabHeader li {
+    padding: 0 10px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.order-ul {
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.order-ul li {
+    width: 82px;
+    text-align: center;
+}
+
+.order-ul .operation {
+    color: #409EFF;
+}
+
+.order-ul .operation span {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.current-order-ul {
+    height: calc(100vh - (165px));
+    overflow: auto;
+}
+
+.tablicolor {
+    color: #409EFF;
+    border-bottom: 2px solid #409EFF;
+}
+
+.classify {
+    width: 237px;
+    text-align: center;
+}
+
+.classify button {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #f56c6c;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.classify ul {
+    height: calc(100vh - (139px));
+    overflow: auto;
+    padding: 10px;
+}
+
+.classify li {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f56c6c;
+}
+
+.classify h1 {
+    color: #409EFF;
+    border-bottom: 1px solid #409EFF;
+    width: 160px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.classify img {
+    width: 100%;
+    height: 100%;
+}
+
+.tab {
+    padding: 10px;
+}
+
+.tab-header li {
+    padding: 5px;
+}
+
+.tab-content {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.tabBtnActived {
+    border-bottom: 2px solid #409EFF;
+}
+
+/* 整个页面初始过渡效果类 */
+
+.move-enter {
+    opacity: 0;
+    transform: translateY(120px);
+}
+
+.move-enter-active {
+    transition: all .4s;
+}
+
+/* tab切换过渡效果类 */
+
+.slideLeft-enter {
+    opacity: 0;
+    transform: translateX(60px)
+}
+
+.slideLeft-enter-active, .slideLeft-leave-active {
+    transition: all .4s;
+    position: absolute;
+}
+
+.slideLeft-leave-to {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.slideLeft-move {
+    transition: all .4s;
+}

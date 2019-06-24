@@ -1,0 +1,98 @@
+[
+    {
+        "classify": "饮料",
+        "productList": [
+            {
+                "id": "1",
+                "name": "可口可乐",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./assets/images/coco.jpg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "2",
+                "name": "雪碧",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./assets/images/spirit.jpeg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "3",
+                "name": "芬达",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./assets/images/fenda.jpg",
+                "width": 180,
+                "height": 198
+            }
+        ]
+    },
+    {
+        "classify": "主食",
+        "productList": [
+            {
+                "id": "4",
+                "name": "藤香鸡腿堡",
+                "count": 0,
+                "price": 18,
+                "imgUrl": "./assets/images/hamburger.jpeg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "5",
+                "name": "奥尔良鸡腿堡",
+                "count": 0,
+                "price": 15,
+                "imgUrl": "./assets/images/aoerliangham.jpg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "6",
+                "name": "鸡腿堡",
+                "count": 0,
+                "price": 10,
+                "imgUrl": "./assets/images/jituiham.jpeg",
+                "width": 180,
+                "height": 198
+            }
+        ]
+    },
+    {
+        "classify": "小食",
+        "productList": [
+            {
+                "id": "7",
+                "name": "大薯",
+                "count": 0,
+                "price": 16,
+                "imgUrl": "./assets/images/shutiaoL.jpg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "8",
+                "name": "中薯",
+                "count": 0,
+                "price": 10,
+                "imgUrl": "./assets/images/shutiaoM.jpg",
+                "width": 180,
+                "height": 198
+            },
+            {
+                "id": "9",
+                "name": "小薯",
+                "count": 0,
+                "price": 6,
+                "imgUrl": "./assets/images/shutiaoS.jpeg",
+                "width": 180,
+                "height": 198
+            }
+        ]
+    }
+]

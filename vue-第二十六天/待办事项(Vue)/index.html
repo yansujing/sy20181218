@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>待办事项</title>
+    <link href="./css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <p class="desc">
+            <input v-model='backlog' type="text" placeholder="请输入待办事项内容..." />
+            <button @click='add'>添加</button>
+            <select v-model='itemSelected'>
+                <option value="1">全部</option>
+                <option value="2">已完成</option>
+                <option value="3">未完成</option>
+            </select>
+        </p>
+        <ul class="descul">
+            <li v-for='(item,index) of getBacklogList'>
+                <span class="span1">{{item.title}}</span>
+                <label>
+                    <span
+                        :class='{finished:item.isFinish,unfinished:!item.isFinish}'>{{item.isFinish?'已完成':'未完成'}}</span>
+                    <input type="checkbox" v-model='item.isFinish' />
+                </label>
+                <button @click='del(index)'>删除</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

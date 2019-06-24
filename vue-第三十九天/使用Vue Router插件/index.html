@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用Vue Router插件</title>
+    <style>
+        .router-link-exact-active,
+        .router-link-active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>我是标题</h1>
+
+        <!-- 通过 <router-view></router-view> 组价 定义 路由匹配的 渲染出口（也就是路由匹配到的 组件 的 渲染位置） -->
+        <router-view></router-view>
+        <!-- <router-view></router-view>
+        <router-view></router-view> -->
+
+        <!-- 通过 router-link 组件 来 导航路由 -->
+        <!-- 当 router-link 组件 对应的路由匹配成功，将会自动应用 router-link-exact-active router-link-active两个class-->
+        <router-link to='/home'>Home</router-link>
+        <router-link to='/about'>About</router-link>
+        <router-link to='/contact'>Contact</router-link>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

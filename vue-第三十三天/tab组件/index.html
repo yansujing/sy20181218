@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>tab组件</title>
+	<link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="app">
+
+		<app-tabs :tab-btns='tabBtns' :current-index='2' class="app-tabs">
+			<div slot='tab0'>tab内容11111111</div>
+			<p slot='tab1'>tab内容22222222</p>
+			<h1 slot='tab2'>tab内容3333333333</h1>
+			<div slot='tab3'>
+				<app-com1></app-com1>
+			</div>
+		</app-tabs>
+
+		<!-- <app-tabs :tab-btns='tabBtns' :current-index='1' class="app-tabs1"></app-tabs>
+
+		<app-tabs :tab-btns='tabBtns' class="app-tabs1"></app-tabs> -->
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格数据</title>
+    <link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+
+        <div class='user-info-list'>
+            <p class='nodata'>没有数据！</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class='date'> 日期 <i class='sort ascending'></i>
+                            <i class='sort descending'></i>
+                        </th>
+                        <th>姓名</th>
+                        <th>地址</th>
+                        <th>邮编</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+
+                </tbody>
+            </table>
+        </div>
+        <!-- 编辑框背景遮罩 -->
+        <div class="cover">
+            <div class='user-info-edit'>
+                <p>
+                    <label>姓名</label>
+                    <input id="name" type='text' />
+                </p>
+                <p>
+                    <label>地址</label>
+                    <input id="address" type='text' />
+                </p>
+                <p>
+                    <label>邮编</label>
+                    <input id="zipCode" type='text' />
+                </p>
+                <p>
+                    <button id="cancel">取消</button>
+                    <button id="save">保存</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

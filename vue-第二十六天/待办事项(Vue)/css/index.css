@@ -1,0 +1,84 @@
+#app {
+    width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.desc>input {
+    width: 470px;
+    border: none;
+    outline: none;
+    font-size: 45px;
+    border-bottom: 2px solid red;
+}
+
+.desc button {
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 20px;
+    border: none;
+    height: 40px;
+    font-weight: bolder;
+}
+
+.desc select {
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 20px;
+    height: 40px;
+    font-weight: bolder;
+}
+
+.desc button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.descul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.descul li {
+    border: 1px solid rgb(44, 44, 44);
+    margin-bottom: 10px;
+    font-size: 30px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #eee;
+}
+
+.descul .span1 {
+    margin-left: 10px;
+}
+
+.descul button {
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 20px;
+    border: none;
+    float: right;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.descul button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.finished {
+    margin-left: 20px;
+    color: blue;
+}
+
+.unfinished {
+    margin-left: 20px;
+    color: red;
+}

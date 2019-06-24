@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.center {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}

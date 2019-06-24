@@ -1,0 +1,14 @@
+
+
+作业：
+
+  1.将之前做的 ‘待办事项’ 使用 Vue框架实现
+
+预习 
+
+  1.表单输入绑定的修饰符：https://cn.vuejs.org/v2/guide/forms.html#%E4%BF%AE%E9%A5%B0%E7%AC%A6
+
+  2.事件处理的修饰符：https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6
+  
+  3.Vue实例生命周期钩子函数：https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90
+  

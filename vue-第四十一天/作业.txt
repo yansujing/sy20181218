@@ -1,0 +1,5 @@
+
+
+预习 
+
+  1.Vuex（状态管理） https://vuex.vuejs.org/zh

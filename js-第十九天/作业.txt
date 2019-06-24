@@ -1,0 +1,11 @@
+
+
+预习
+
+  1.Set和Map数据结构
+  
+  2.Promise对象
+
+  参考链接：http://es6.ruanyifeng.com/
+
+

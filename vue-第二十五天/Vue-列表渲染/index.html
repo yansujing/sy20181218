@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Vue-列表渲染</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<ul>
+			<!-- item只能在当前DOM元素中访问 -->
+			<li v-for='(item,index) of arr'>
+				<span>{{index}}-{{item}}</span>
+			</li>
+
+			<!-- {{item}} -->
+		</ul>
+
+		<!-- 遍历对象 -->
+		<ul>
+			<li v-for='(value,key,index) of obj'>
+				<span>{{index}}-{{key}}-{{value}}</span>
+			</li>
+		</ul>
+
+		<!-- v-for与v-if是可以同时使用的 -->
+		<ul>
+			<li v-for='item of arr1' v-if='item.flag'>
+				<span>{{item.title}}</span>
+				<span>{{item.flag?'已完成':'未完成'}}</span>
+			</li>
+		</ul>
+
+		<ul>
+			<li v-for='item of arr1'>
+				<span>{{item.title}}</span>
+				<span>{{item.flag?'已完成':'未完成'}}</span>
+			</li>
+		</ul>
+
+		<ul>
+			<li v-for='item of filterArr'>
+				<span>{{item.title}}</span>
+				<span>{{item.flag?'已完成':'未完成'}}</span>
+			</li>
+		</ul>
+
+
+		<!-- 也可以遍历一段取值范围 -->
+		<ul>
+			<li v-for='item of 100'>
+				{{item}}
+			</li>
+		</ul>
+
+		<button @click='add'>添加</button>
+		<button @click='del'>删除</button>
+
+	</div>
+
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

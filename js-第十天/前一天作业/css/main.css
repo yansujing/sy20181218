@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+}
+
+#app {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.login{
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid red;
+}
+
+.login-p{
+    margin-top: 20px;
+    width: 300px;
+}
+
+.login-p label{
+    display: block;
+}
+
+.login-p input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.login-p p{
+    position: relative;
+}
+
+.login-p .password{
+    padding-right: 42px;
+}
+
+.switch-password{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.tip{
+    display: none;
+    color:red;
+}

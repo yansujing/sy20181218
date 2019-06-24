@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>待办事项-组件化</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="operation">
+            <app-input v-model.trim='addBackLog'></app-input>
+            <button-com get-text='添加' @trigger-click='add'></button-com>
+            <app-select :select-list='selectList' @select-change='select'></app-select>
+        </div>
+
+        <finish-info :finish-info='finishInfo'></finish-info>
+
+        <list-container :get-list='list' :show-filter='show'></list-container>
+
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+[
+    {
+        "classify": "饮料",
+        "productList": [
+            {
+                "id": "1",
+                "name": "可口可乐",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./images/coco.jpg"
+            },
+            {
+                "id": "2",
+                "name": "雪碧",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./images/spirit.jpeg"
+            },
+            {
+                "id": "3",
+                "name": "芬达",
+                "count": 0,
+                "price": 7,
+                "imgUrl": "./images/fenda.jpg"
+            }
+        ]
+    },
+    {
+        "classify": "主食",
+        "productList": [
+            {
+                "id": "4",
+                "name": "藤香鸡腿堡",
+                "count": 0,
+                "price": 18,
+                "imgUrl": "./images/hamburger.jpeg"
+            },
+            {
+                "id": "5",
+                "name": "奥尔良鸡腿堡",
+                "count": 0,
+                "price": 15,
+                "imgUrl": "./images/aoerliangham.jpg"
+            },
+            {
+                "id": "6",
+                "name": "鸡腿堡",
+                "count": 0,
+                "price": 10,
+                "imgUrl": "./images/jituiham.jpeg"
+            }
+        ]
+    },
+    {
+        "classify": "小食",
+        "productList": [
+            {
+                "id": "7",
+                "name": "大薯",
+                "count": 0,
+                "price": 16,
+                "imgUrl": "./images/shutiaoL.jpg"
+            },
+            {
+                "id": "8",
+                "name": "中薯",
+                "count": 0,
+                "price": 10,
+                "imgUrl": "./images/shutiaoM.jpg"
+            },
+            {
+                "id": "9",
+                "name": "小薯",
+                "count": 0,
+                "price": 6,
+                "imgUrl": "./images/shutiaoS.jpeg"
+            }
+        ]
+    }
+]

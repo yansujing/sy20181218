@@ -1,0 +1,75 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.game-con {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid red;
+}
+
+.info {
+    font-size: 25px;
+    margin: 20px 0 40px 0;
+}
+
+.info>span.fl {
+    margin-left: 100px;
+}
+
+.info>span.fr {
+    margin-right: 100px;
+}
+
+.subject {
+    text-align: center;
+    font-size: 60px;
+}
+
+.subject .title {
+    font-size: 80px;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.subject li {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.game-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-btn button {
+    background-color: yellowgreen;
+    width: 200px;
+    line-height: 65px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+}

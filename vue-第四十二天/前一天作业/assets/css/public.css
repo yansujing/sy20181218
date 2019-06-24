@@ -1,0 +1,75 @@
+.ui-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.ui-flex.wrap {
+    flex-wrap: wrap;
+}
+
+.ui-flex.justify-end {
+    justify-content: flex-end;
+}
+
+.ui-flex.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+.fl {
+    float: left;
+    width: pxToVw(20);
+}
+
+.fr {
+    float: right;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 48px 0 54px 0;
+    overflow: auto;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 54px;
+}

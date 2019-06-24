@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>插槽应用例子</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<app-news new-title='新闻图片'>
+			<ul>
+				<li>
+					<img
+						src="https://t10.baidu.com/it/u=1137759663,547214981&fm=173&app=25&f=JPEG?w=218&h=146&s=7E89D00BC8BC381DCF11D4AA0300F011" />
+					<p>父亲被女儿告上法庭，还遭女婿殴打，女儿：我都不...</p>
+				</li>
+				<li>
+					<img
+						src="https://t10.baidu.com/it/u=1137759663,547214981&fm=173&app=25&f=JPEG?w=218&h=146&s=7E89D00BC8BC381DCF11D4AA0300F011" />
+					<p>父亲被女儿告上法庭，还遭女婿殴打，女儿：我都不...</p>
+				</li>
+				<li>
+					<img
+						src="https://t10.baidu.com/it/u=1137759663,547214981&fm=173&app=25&f=JPEG?w=218&h=146&s=7E89D00BC8BC381DCF11D4AA0300F011" />
+					<p>父亲被女儿告上法庭，还遭女婿殴打，女儿：我都不...</p>
+				</li>
+			</ul>
+		</app-news>
+
+		<app-news new-title='新闻资讯'>
+			<ul>
+				<li>
+					<a href="">父亲被女儿告上法庭，还遭女婿殴打，女儿：我都不...</a>
+				</li>
+				<li>
+					<a href="">父亲被女儿告上法庭，还遭女婿殴打，女儿：我都不...</a>
+				</li>
+			</ul>
+		</app-news>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

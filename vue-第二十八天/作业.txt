@@ -1,0 +1,11 @@
+
+
+作业：
+
+  1.使用 组件化 的方式 重写 ‘待办事项’
+
+预习 
+  
+  1.组件：
+  https://cn.vuejs.org/v2/guide/components.html
+  https://cn.vuejs.org/v2/guide/components-registration.html

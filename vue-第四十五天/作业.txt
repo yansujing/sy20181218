@@ -1,0 +1,17 @@
+
+
+考试
+  
+  1.使用 webpack 开发 Vue项目 ‘点单系统’
+
+
+预习 
+  
+  1.单文件组件 https://cn.vuejs.org/v2/guide/single-file-components.html
+  
+  2.Vue CLI https://cli.vuejs.org/zh/guide/
+  
+  3.sass https://www.sass.hk/
+ 
+ 
+ 

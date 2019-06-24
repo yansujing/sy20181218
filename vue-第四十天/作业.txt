@@ -1,0 +1,9 @@
+
+
+预习 
+
+  1.导航守卫 https://router.vuejs.org/zh/guide/advanced/navigation-guards.html
+  
+  2.过渡动效 https://router.vuejs.org/zh/guide/advanced/transitions.html
+  
+  3.数据获取 https://router.vuejs.org/zh/guide/advanced/data-fetching.html

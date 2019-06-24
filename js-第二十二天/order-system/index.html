@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>点菜系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="./css/public.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="fl container-item order">
+			<div class="tab tab1" data-currentindex='0'>
+				<ul class="tab-header clearfix">
+					<li class="fl tab-header-item">
+						当前订单
+					</li>
+					<li class="fl tab-header-item">
+						挂单中
+					</li>
+					<li class="fl tab-header-item">
+						已付款
+					</li>
+					<li class="fl tab-header-item">
+						取消的订单
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-content-item">
+						<ul class="order-header clearfix">
+							<li class="fl order-header-item">
+								商品名称
+							</li>
+							<li class="fl order-header-item">
+								数量
+							</li>
+							<li class="fl order-header-item">
+								价格
+							</li>
+							<li class="fl order-header-item">
+								操作
+							</li>
+						</ul>
+
+						<div class="order-content" id="current-order">
+							<!-- <ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									可口可乐
+								</li>
+								<li class="fl order-content-item">
+									1
+								</li>
+								<li class="fl order-content-item">
+									7
+								</li>
+								<li class="fl order-content-item">
+									<p>
+										<span>删除</span>
+										<span>-</span>
+										<span>+</span>
+									</p>
+								</li>
+							</ul> -->
+						</div>
+					</div>
+					<div class="tab-content-item">
+						<ul class="order-header clearfix">
+							<li class="fl order-header-item">
+								单号
+							</li>
+							<li class="fl order-header-item">
+								桌号
+							</li>
+							<li class="fl order-header-item">
+								金额
+							</li>
+						</ul>
+
+						<div class="order-content">
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									1001
+								</li>
+								<li class="fl order-content-item">
+									12
+								</li>
+								<li class="fl order-content-item">
+									345
+								</li>
+							</ul>
+							<ul class="order-content-ul clearfix">
+								<li class="fl order-content-item">
+									1001
+								</li>
+								<li class="fl order-content-item">
+									12
+								</li>
+								<li class="fl order-content-item">
+									345
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="tab-content-item">
+						已付款
+					</div>
+					<div class="tab-content-item">
+						取消的订单
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fl container-item product">
+
+		</div>
+
+	</div>
+
+	<script src="./js/ajax.js"></script>
+	<script src="./js/jquery-3.3.1.js"></script>
+	<script src="./js/tab.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

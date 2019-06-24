@@ -1,0 +1,9 @@
+
+
+作业：
+
+  1.继续完成 ‘点单系统’，效果参见 链接 http://192.168.1.173:3000/index.html
+
+预习 
+
+  1.自定义指令 https://cn.vuejs.org/v2/guide/custom-directive.html

@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 30px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-right: 3%;
+    width: 17.6%;
+    border: 1px solid #000;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    will-change: transform;
+    transform: translate3d(0,0,0);
+    transition: all .8s ease-in-out;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+select {
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.loading{
+    /* display: none; */
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.loading img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 60px;
+    transform: translate(-50%,-50%);
+}

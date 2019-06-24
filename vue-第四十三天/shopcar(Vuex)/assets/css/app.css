@@ -1,0 +1,89 @@
+#app {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.shopcar-info-list {
+    padding: 25px;
+}
+
+.shopcar-info-list .first {
+    width: 81px;
+}
+
+.shopcar-info-list table {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #ebeef5;
+}
+
+.shopcar-info-list table thead {
+    color: #000;
+    font-weight: 500;
+}
+
+.shopcar-info-list table td, th {
+    text-align: center;
+    border: 1px solid #ebeef5;
+    padding: 15px;
+}
+
+.shopcar-info-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.shopcar-info-item button {
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 12px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.shopcar-info-item .del {
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+    color: #fff;
+}
+
+.num button {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.num input {
+    font-size: 18px;
+    width: 100px;
+    height: 37px;
+    outline: none;
+}
+
+.statistics {
+    margin-top: 30px;
+}
+
+.count span, .money span {
+    margin: 0 10px;
+    color: red;
+}
+
+.money button {
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #449d44;
+}

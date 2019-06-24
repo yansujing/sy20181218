@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>插槽</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<app-title>
+			<!-- 自定义元素中的内容会被 分发到 子组件模板的相应位置 -->
+			<!-- 通过元素的 slot属性 来定义元素在当前组件模板中的位置 -->
+			<p slot='p'>我是一段内容</p>
+
+			<!-- 所有没有 slot属性的 元素 都会被 分发到 默认插槽的位置 -->
+			<!-- <ul>
+				<li>列表</li>
+				<li>列表</li>
+				<li>列表</li>
+				<li>列表</li>
+			</ul> -->
+
+			<a slot='ul' slot-scope='{link}' :href="link.url">{{link.title}}</a>
+
+			<ul slot='ul'>
+				<li>列表</li>
+				<li>列表</li>
+				<li>列表</li>
+				<li>列表</li>
+			</ul>
+
+		</app-title>
+
+		<app-btn>
+			编辑
+		</app-btn>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

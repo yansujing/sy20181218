@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .regional-selection select {
+            width: 100px;
+            padding: 8px;
+            outline: none;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class='regional-selection'>
+            <select v-model='selectBox.province'>
+                <option :value='item.provinceId' v-for='item of list'>{{item.provinceName}}</option>
+            </select>
+            <select v-model='selectBox.city'>
+                <option :value='item.cityId' v-for='item of getList.city'>{{item.cityName}}</option>
+            </select>
+            <select v-model='selectBox.area'>
+                <option :value='item.areaId' v-for='item of getList.area'>{{item.areaName}}</option>
+            </select>
+        </div>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

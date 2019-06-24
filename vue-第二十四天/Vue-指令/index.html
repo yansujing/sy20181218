@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Vue-指令</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<h1 v-if='flag1'>我是标题1</h1>
+		<h2 v-else>我是二级标题1</h2>
+
+		<h1 v-show='flag2'>我是标题2</h1>
+
+		<h1 v-once>{{title}}</h1>
+
+
+		<p v-html='url'></p>
+		<p v-text='url'></p>
+
+
+		<p>
+			<!-- <a v-bind:href='href' v-bind:data-src='href'>百度一下</a> -->
+			<a :href='href' :data-src='href'>百度一下</a>
+		</p>
+
+		<ul>
+			<li v-on:click='fn1'>列表1</li>
+			<li @click='fn1'>列表2</li>
+			<li>列表3</li>
+			<li>列表4</li>
+		</ul>
+	</div>
+
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

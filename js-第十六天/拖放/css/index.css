@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+}
+.con{
+    width: 600px;
+    height: 600px;
+    margin:  0 auto;
+    border: 1px solid red;
+}
+img{
+    width: 400px;
+    margin-top: 60px;
+}

@@ -1,0 +1,13 @@
+
+
+预习 
+
+  1.命名路由 https://router.vuejs.org/zh/guide/essentials/named-routes.html
+  
+  2.编程式的导航 https://router.vuejs.org/zh/guide/essentials/navigation.html
+  
+  3.命名视图 https://router.vuejs.org/zh/guide/essentials/named-views.html
+  
+  4.重定向和别名 https://router.vuejs.org/zh/guide/essentials/redirect-and-alias.html
+  
+  5.路由组件传参 https://router.vuejs.org/zh/guide/essentials/passing-props.html

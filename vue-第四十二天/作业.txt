@@ -1,0 +1,13 @@
+
+
+
+作业：
+  
+  1.使用 VueRouter和Vuex插件 完成 ‘点餐系统’（模块化开发）
+
+预习 
+
+  1.Vuex Getter https://vuex.vuejs.org/zh/guide/getters.html
+ 
+ 
+ 

@@ -1,0 +1,11 @@
+
+
+作业：
+
+  1.使用 组件化 的方式 完成 ‘地区选择’
+
+预习 
+
+  1.sync修饰符：https://cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6
+  
+  2.插槽：https://cn.vuejs.org/v2/guide/components-slots.html

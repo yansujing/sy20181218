@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+}
+
+#app {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.name-search {
+    color: #606266;
+    padding: 25px;
+    background-color: #f2f2f2;
+}
+
+.name-search label {
+    padding-right: 12px;
+}
+
+.name-search input {
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    display: inline-block;
+    height: 36px;
+    outline: 0;
+    padding: 0 15px;
+    transition: border-color .6s
+}
+
+.name-search input:focus {
+    border-color: rgb(88, 168, 251);
+}
+
+.name-search button {
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 1;
+    vertical-align: top;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #409eff;
+    border: 1px solid #409eff;
+    margin-left: 12px;
+}
+
+.user-info-list {
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.user-info-list table {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #ebeef5;
+}
+
+.user-info-list table thead {
+    color: #909399;
+    font-weight: 500;
+}
+
+.user-info-list table td,
+th {
+    border: 1px solid #ebeef5;
+    padding: 15px;
+}
+
+.user-info-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.user-info-item button {
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 12px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.user-info-item .del {
+    background-color: #f56c6c;
+    border-color: #f56c6c;
+    color: #fff;
+}
+
+.user-info-list .date {
+    position: relative;
+}
+
+.user-info-list .date .sort {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    position: absolute;
+    left: 55px;
+    cursor: pointer;
+}
+
+.user-info-list .date .ascending {
+    border-bottom-color: #c0c4cc;
+    top: 13px;
+}
+
+.user-info-list .date .descending {
+    border-top-color: #c0c4cc;
+    bottom: 13px;
+}
+
+.user-info-list .date .flagclick1 {
+    border-bottom-color: #409eff;
+}
+
+.user-info-list .date .flagclick2 {
+    border-top-color: #409eff;
+}
+
+.nodata {
+    text-align: center;
+    color: red;
+}
+
+.user-info-edit {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #909399;
+}
+
+.user-info-edit {
+    color: #909399;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.user-info-edit p {
+    margin-bottom: 10px;
+}
+
+.user-info-edit label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.user-info-edit input {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 36px;
+    outline: 0;
+    padding: 0 15px;
+    transition: border-color .6s
+}
+
+.user-info-edit input:focus {
+    border-color: rgb(88, 168, 251);
+}
+
+.user-info-edit button {
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 12px;
+    border: 1px solid #f56c6c;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    background-color: #f56c6c;
+}
+
+.user-info-edit button:nth-child(2) {
+    background-color: #409eff;
+    border: 1px solid #409eff;
+}
+
+.user-info-edit p:last-child {
+    text-align: right;
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+[v-cloak] {
+    display: none;
+}

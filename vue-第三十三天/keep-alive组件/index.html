@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>keep-alive组件</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- component也不会被渲染出来 -->
+		<!-- <keep-alive :include='/AppCom/'>
+			<component :is='comName'></component>
+		</keep-alive>
+
+		<keep-alive include='AppCom'>
+			<component :is='comName'></component>
+		</keep-alive> -->
+
+
+		<keep-alive>
+			<app-com1 v-if='flag'></app-com1>
+			<app-com2 v-else></app-com2>
+		</keep-alive>
+		<button @click='fn2'>切换</button>
+
+		<!-- <button @click='fn(1)'>AppCom1</button>
+		<button @click='fn(2)'>AppCom2</button>
+		<button @click='fn(3)'>AppCom3</button> -->
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

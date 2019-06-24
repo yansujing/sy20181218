@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>数据获取</title>
+    <style>
+        .fade-enter,
+        .fade-leave-to {
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: all .8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <transition name='fade' mode='out-in'>
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
+        </transition>
+
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <script src='./js/main.js' type="module"></script>
+</body>
+
+</html>

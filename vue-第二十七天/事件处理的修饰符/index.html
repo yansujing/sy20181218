@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>事件处理的修饰符</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- .stop -->
+		<!-- .prevent -->
+
+		<a @click.prevent='' href="https://www.baidu.com">百度一下</a>
+
+		<form @submit.prevent='fn'>
+			<p>
+				<input name="username" type="text" placeholder="Username">
+			</p>
+			<p>
+				<input type="email" placeholder="email@email.com">
+			</p>
+			<p>
+				<!-- (提交) input的默认值 -->
+				<input type="submit" value="提交" />
+			</p>
+		</form>
+
+		<p>1234</p>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+
+
+预习
+
+  1.es6 module(模块)
+
+  参考链接：http://es6.ruanyifeng.com/#docs/module
+
+

@@ -1,0 +1,12 @@
+
+
+作业：
+
+  1.图片上传预览（可多选）
+
+预习：
+
+  1.正则（RegExp）
+
+预习参考链接：https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000
+  

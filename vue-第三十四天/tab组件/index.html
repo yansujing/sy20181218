@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>tab组件</title>
+	<link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="app">
+
+		<el-tabs :current-tab-panel='name' class="app-tabs">
+			<el-tab-pane label='用户管理' name="first">
+				111111111
+			</el-tab-pane>
+			<el-tab-pane label='配置管理' name="second">
+				222222222
+			</el-tab-pane>
+			<el-tab-pane label='角色管理' name="third">
+				333333333
+			</el-tab-pane>
+			<el-tab-pane label='定时任务补偿' name="fourth">
+				444444444
+			</el-tab-pane>
+		</el-tabs>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

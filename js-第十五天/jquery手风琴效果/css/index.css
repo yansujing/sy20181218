@@ -1,0 +1,50 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: brown;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6d4c4c;
+    display: none;
+}
+
+.first-ul {
+    display: block;
+}
+
+.list h3 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    background-color: burlywood;
+    cursor: pointer;
+}
+
+.list:last-child>h3 {
+    border-bottom: none;
+}
+
+ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li button {
+    float: right;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #9c1b1b;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style>
+        #app {
+            width: 600px;
+            border: 1px solid red;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        input {
+            padding: 0 10px;
+            height: 45px;
+            font-size: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .errors {
+            color: #f00;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <form @submit.prevent='add' id="form">
+            <p>
+                <input v-model='user.name' type="text" placeholder="Username">
+            </p>
+            <p v-if='setValidate.userName' class="errors">用户名不符合规则！(4-16位字符，可以包含数字、字母、下划线)</p>
+            <p>
+                <input v-model='user.email' type="text" placeholder="email@email.com">
+            </p>
+            <p v-if='setValidate.email' class="errors">请输入一个有效的email地址！</p>
+            <p>
+                <input type="submit" value="添加">
+            </p>
+        </form>
+        <ul>
+            <li v-for='(item,index) of user.list'>
+                {{item.userName}}---{{item.email}}
+                <button @click='del(index)'>删除</button>
+            </li>
+        </ul>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

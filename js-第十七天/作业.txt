@@ -1,0 +1,9 @@
+
+
+预习
+  
+  1.es6：let,const,解构赋值
+
+  参考链接：http://es6.ruanyifeng.com/
+
+

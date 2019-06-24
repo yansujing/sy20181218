@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>组件模板根元素的属性(除props属性)继承</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<app-title class='title' style='color:red' id="ti" data-id='123' :get-title.sync='title'></app-title>
+
+		<app-input type='password' placeholder='请输入密码'></app-input>
+
+		<app-input type='email' placeholder='请输入邮箱' @input='fn1' @ss='fn1'></app-input>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+公司新闻数据列表:
+
+  接口地址：http://www.bozedu.net:8888/article/main/index
+  
+  请求方式：POST
+  
+  请求发送数据的编码方式：表单
+  
+  接口参数：
+  
+  page 页码 //0、1、2…
+  limit 每页返回个数 默认10个 //可缺省
+
+
+公司新闻详情:
+
+  接口地址：http://www.bozedu.net:8888/article/main/detail
+  
+  请求方式：GET
+  
+  接口参数：
+  
+    id 新闻编号// 在数据列表接口返回的id字段中

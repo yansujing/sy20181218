@@ -1,0 +1,8 @@
+$baseWidth:375;
+
+$headerH:48px;
+$footerH:54px;
+
+@function pxToVw($n){
+    @return (100/$baseWidth*$n)*1vw;
+}

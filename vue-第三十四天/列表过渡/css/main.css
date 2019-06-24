@@ -1,0 +1,19 @@
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .8s;
+}
+
+.fade-leave-active {
+    position: absolute;
+}
+
+.fade-move {
+    transition: all .8s;
+}
+
+/* .fade-enter-to {
+    color: red;
+} */

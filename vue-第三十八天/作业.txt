@@ -1,0 +1,5 @@
+
+
+预习 
+
+  1.Vue Router插件 https://router.vuejs.org/zh

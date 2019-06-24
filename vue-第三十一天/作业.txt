@@ -1,0 +1,7 @@
+
+
+考试内容：组件化开发方式 实现 ‘点单系统’
+
+预习 
+  
+  1.插槽：https://cn.vuejs.org/v2/guide/components-slots.html

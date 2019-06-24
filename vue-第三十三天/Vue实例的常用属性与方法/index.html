@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Vue实例的常用属性与方法</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- 通过 ref属性 给元素 设置 引用信息 -->
+		<p ref='p1'></p>
+
+		<app-com1 ref='appCom1'></app-com1>
+
+		<app-com2></app-com2>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

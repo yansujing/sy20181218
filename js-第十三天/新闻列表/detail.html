@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新闻数据列表详情</title>
+</head>
+
+<body>
+
+    <p id="content"></p>
+
+    <script src="./js/ajax.js"></script>
+    <script>
+
+        console.log(sessionStorage.getItem('id'));
+
+        var id = sessionStorage.getItem('id');
+
+        var obj = {
+            method: 'GET',
+            url: 'http://www.bozedu.net:8888/article/main/detail?id=' + id,
+            async: true,
+            data: 'id=' + id,
+            dataType: 'form',
+            callback: function (responseData) {
+                console.log(responseData);
+
+                var data = JSON.parse(responseData).data;
+
+                var contentEle = document.getElementById('content');
+
+                contentEle.innerHTML = data.content;
+            }
+        }
+
+        ajaxfn(obj);
+
+    </script>
+</body>
+
+</html>

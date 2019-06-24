@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新闻数据列表</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+
+    <div id="app">
+        <ul class="con">
+            <li v-for='item of page.list'>
+                <a :href='`./detail.html?${item.id}`' target="blank">{{item.title}}</a>
+            </li>
+        </ul>
+
+        <div class="page">
+            <p class="page_p">现在是第
+                <span class="page_sp1">{{page.current}}</span>页 共
+                <span class="page_sp2">{{page.total}}</span>页</p>
+            <button @click='previous' class="first_btn">上一页</button>
+            <button @click='next' class="sec_btn">下一页</button>
+        </div>
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

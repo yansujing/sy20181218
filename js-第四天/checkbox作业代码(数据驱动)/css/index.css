@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    padding: 50px;
+}
+
+.sports-checkbox{
+    padding: 20px;
+    border: 5px solid red;
+    overflow: hidden;
+}
+
+.sports-checkbox-li{
+    margin-right: 15px;
+}
+
+.check-all{
+    margin-left: 60px;
+}
+
+.fl{
+    float: left;
+}
+
+.move-btn{
+    margin: 20px 0;
+}
+
+.checked-sports{
+    padding: 20px;
+    border: 5px solid red;
+}

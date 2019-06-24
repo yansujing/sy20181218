@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#upload_area{
+    width: 617px;
+    height: 400px;
+    border: 1px solid red;
+    overflow: auto;
+}
+
+#upload_area img{
+    width: 200px;
+    height: 200px;
+}

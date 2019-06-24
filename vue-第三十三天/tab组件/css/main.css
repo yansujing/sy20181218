@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.center {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.tab {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.tab-header li {
+    padding: 10px;
+}
+
+.tab-content{
+    margin-top: 15px;
+    padding: 10px;
+    border:  1px solid #000;
+}
+
+.app-tabs {
+    width: 800px;
+}
+
+.app-tabs1 {
+    width: 600px;
+}
+
+.tabBtnActived {
+    border-bottom: 2px solid #409EFF;
+}

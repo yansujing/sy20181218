@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Vue-插值语法</title>
+</head>
+
+<body>
+
+	<div id="app">
+		<p>{{title.split(',').join(',')}}</p>
+
+		<p>{{obj}}</p>
+
+		<h1>{{obj.flag?'hello':'world'}}</h1>
+	</div>
+
+	<section id="app1">
+		<h1>{{title}}</h1>
+	</section>
+
+
+	<!-- Vue实例 绑定的DOM元素外部 是无法解析的 -->
+	<h1>{{title.split(',')}}</h1>
+
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

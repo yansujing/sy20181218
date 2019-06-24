@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>组件发送自定义事件(发送数据)</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!-- 自定义事件发送的数据 被传递给了 事件处理方法的第一个参数 -->
+		<app-select :get-list='selectList' @send-select='fn($event,123)'></app-select>
+
+		<!-- $event:事件产生的 事件对象 -->
+		<button @click='fn1($event)'>按钮</button>
+
+	</div>
+
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

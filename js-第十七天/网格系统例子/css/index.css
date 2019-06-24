@@ -1,0 +1,13 @@
+header{
+    max-width: 700px;
+    margin:  0 auto;
+    text-align: center;
+}
+
+.sec-item{
+    border: 1px solid rgb(151, 149, 149);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    margin: 0 15px;
+    flex: 1;
+    min-width: 210px;
+}
