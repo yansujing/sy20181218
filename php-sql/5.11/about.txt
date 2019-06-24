@@ -1,0 +1,4 @@
+apple
+25
+reading
+sports

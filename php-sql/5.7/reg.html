@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员注册</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <form action="reg.php" method="POST" enctype="multipart/form-data">
+
+            <p>用户名：<input type="text" name="username" id="username" autofocus><span class="checkres"></span></p>
+            <p>密码：<input type="password" name="pwd" id="pwd"></p>
+            <p>手机号：<input type="text" name="mobile" id="mobile" maxlength="11"></p>
+            <p>性别：<input type="radio" name="sex" value="女">女 <input type="radio" name="sex" value="男">男</p>
+            <p>
+                兴趣爱好：
+                <input type="checkbox" name="hobby[]" value="阅读">阅读
+                <input type="checkbox" name="hobby[]" value="美食">美食
+                <input type="checkbox" name="hobby[]" value="健身">健身
+            </p>
+            <p>头像：<input type="file" name="photo" id="photo" accept="image/*"></p>
+            <p>自我介绍：<textarea name="desc" id="desc" cols="30" rows="10"></textarea></p>
+
+            <p><input type="submit" value="注册"></p>
+        </form>
+
+    </div>
+</body>
+<!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+    $(function () {
+
+        // 当用户名表单输入框失去焦点时执行
+        $('#username').blur(function () {
+
+            // 获取用户名的值
+            var uname = $(this).val();
+
+            // 正则表达式
+            var reg = /^[a-z1-9]{6,12}$/;
+
+            // 验证用户名的规范性
+            if (!reg.test(uname)) {
+                // alert('用户名填写不规范');
+                $(this).next().text('用户名填写不规范');
+            } else {
+
+                $(this).next().text('');
+                //验证用户名是否已经存在
+                $.ajax({
+                    url: 'checkuser.php',
+                    type: 'post',
+                    data: { uname },
+                    // 期望返回的数据是json类型
+                    dataType: 'json',
+                    beforeSend() {
+
+                    },
+                    success(data) {
+
+                        console.log(data);
+                        if(data===null){
+                            console.log('该用户名可以注册');
+                        }else{
+                            console.log('抱歉');
+                            $('#username').next().text('该用户名已经被注册');
+                        }
+
+                    },
+                    error(xhr, status, error) {
+
+                        console.log(status);
+
+                    }
+
+                })
+
+            }
+
+        })
+
+        // 监听表单提交
+        $('form').submit(function(){
+
+            // 用户名不能为空
+            let uvalue=$('#username').val().trim();
+            let mobile=$('#mobile').val().trim();
+
+            if(uvalue.length<1 || mobile.length<1){
+                alert('请填写用户名和手机号');
+                return false;
+            }
+
+
+            // 检查所有类名为 checkres 的 span 中是否有内容
+            var spanContent='';
+            $('.checkres').each(function(){
+                spanContent +=$(this).text();
+            })
+
+            if(spanContent.length>0){
+                alert('您有未正确项');
+                return false;
+            }
+
+            
+        })
+    })
+</script>
+
+</html>

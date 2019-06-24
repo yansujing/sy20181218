@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录，注册</title>
+
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <script src="./layui/layui.js"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        #login-box{
+            width: 400px;
+            margin:50px auto;
+            padding:10px;
+            border:1px solid black;
+        }
+        
+        #reg-box{
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="login-box">
+        <form class="layui-form login-form">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                        class="layui-input login-name">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input login-pwd">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即登录</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    <button type="button" class="layui-btn layui-btn-primary" id='reg'>注册</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+<form class="layui-form" style="display:none;" id="reg-box">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入框</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input reg-name">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码框</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
+                class="layui-input reg-pwd">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即注册</button>
+        </div>
+    </div>
+
+
+</form>
+
+<!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+    $(function () {
+
+        $('.login-form').submit(function () {
+            console.log(111);
+            let name=$('.login-name').val();
+            let pwd=$('.login-pwd').val();
+
+            $.post('login.php',{user:name,pwd:pwd},function(data){
+                console.log(data);
+            })
+
+            return false;
+
+        })
+
+        $('#reg').click(function () {
+            layui.use('layer', function () {
+                var layer = layui.layer;
+
+                //页面层
+
+                layer.open({
+                    type: 1,
+                    title: '管理员注册',
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['420px', '240px'], //宽高
+                    content: $('#reg-box')
+                });
+
+            });
+        })
+
+        $('#reg-box').submit(function () {
+            // console.log(222);
+            let userName = $('.reg-name').val();
+            let password = $('.reg-pwd').val();
+
+            console.log(userName, password);
+
+            $.post('reg.php', { user: userName, pwd: password }, function (data) {
+
+                if (data === 'ok') {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+
+                        //页面层
+                        layer.msg('注册成功', function(){
+                             layer.closeAll();
+                        });
+                    
+                    });
+                }else{
+
+                    console.log(data);
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+
+                        //页面层
+                        layer.msg('注册失败');
+                    
+                    });
+
+                }
+
+            })
+
+            return false;
+
+        })
+
+    })
+
+</script>
+
+</html>

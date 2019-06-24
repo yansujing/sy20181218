@@ -1,0 +1,128 @@
+<?php
+
+    // 阻止单独访问。只能在入口文件mian.php中加载
+    if(!defined('ROOT')){
+        die('BAD Request');
+    }
+
+    // 接收数据
+    $catagory_main=$_POST['catagory_main'];
+
+    $catagory_sub=$_POST['catagory_sub'];
+    $title=$_POST['title'];
+    $autor=$_POST['autor'];
+    $public=$_POST['public'];
+    $price=$_POST['price'];
+
+    $photo1=$_FILES['photo1'];
+    $photo2=$_FILES['photo2'];
+    $photo3=$_FILES['photo3'];
+    $photo4=$_FILES['photo4'];
+    $photo5=$_FILES['photo5'];
+
+    $update=$_POST['update'];
+    $isRecommend=$_POST['isRecommend'];
+    $isPostFree=$_POST['isPostFree'];
+    $desc=$_POST['desc'];
+
+    $isRecommend=$isRecommend?$isRecommend:0;
+    $isPostFree=$isPostFree?$isPostFree:0;
+
+    // print_r($photo1);
+
+    // echo '<br />';
+
+    // echo $catagory_main.'<br/>'.$catagory_sub.'<br/>'.$title.'<br/>'.$autor.'<br/>'.$public.'<br/>'.$update.'<br/>'.$isRecommend.'<br/>'.$isPostFree.'<br/>'.$desc.'<br/>';
+
+    // print_r($photo);
+
+    // echo '<br />';
+
+    // echo count($photo);
+
+    // addslashes把单双引号转义
+    $desc=addslashes($_POST['desc']);
+
+    // 数据处理
+    $dt=$update?strtotime($update):time();
+
+    // 上传头像
+    $allowed=array('image/jpg','image/jpeg','image/png','image/gif');
+
+    // 创建一个用来存放所有上传文件的服务器的路径
+    $dstArr=array();
+    if($photo1['name']){
+        $dest=upload($photo1,$allowed,1024);
+        $dstArr[]=$dest;
+    }
+    if($photo2['name']){
+        $dest=upload($photo2,$allowed,1024);
+        $dstArr[]=$dest;
+    }
+    if($photo3['name']){
+        $dest=upload($photo3,$allowed,1024);
+        $dstArr[]=$dest;
+    }
+    if($photo4['name']){
+        $dest=upload($photo4,$allowed,1024);
+        $dstArr[]=$dest;
+    }
+
+    if($photo5['name']){
+        $dest=upload($photo5,$allowed,1024);
+        $dstArr[]=$dest;
+    }
+
+    // print_r($dstArr);
+    // echo $desc;
+
+    // 数据入库
+    $sql="INSERT INTO {$pre}book (mcid,scid,book_name,book_autor,book_public,book_price,book_99,book_recommend,book_descript,book_dt) VALUES ($catagory_main,$catagory_sub,'$title','$autor','$public',$price,$isPostFree,$isRecommend,'$desc',$dt)";
+
+    $msql->execute($sql);
+
+    $as=$msql->affectedRows();
+    
+    if($as>0){
+        echo '新增图书成功';
+        echo '<p><a href="main.php?go=book_list">返回图书列表</a> <a href="main.php?go=book_add">继续新增图书</a></p>';
+
+        // 获取刚刚创建的记录的ID
+        $pid=$msql->insertId();
+
+        // 所有的url
+        $url="";
+
+        // 封面入库
+        if(count($dstArr)>0){
+
+            foreach($dstArr as $item){
+
+                $url.="($pid,$catagory_main,'$catagory_sub','$item'),";
+
+            }
+
+            $url=substr($url,0,-1);
+
+            $sql="INSERT INTO {$pre}poster (pid,mcid,scid,url) VALUES $url";
+
+            $msql->execute($sql);
+
+            $ass=$msql->affectedRows();
+
+            if($ass>0){
+                echo '封面入库成功';
+            }else{
+                echo '封面入库失败';
+            }
+
+        }
+
+    }else{
+        echo '新增失败';
+    }
+
+    $msql->error();
+
+
+?>

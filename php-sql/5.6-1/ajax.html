@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax向后台传数据</title>
+</head>
+
+<body>
+    <form>
+        <p>用户名：<input type="text" name="username" id="username"></p>
+        <p>密码：<input type="text" name="pwd" id="pwd"></p>
+        <p>头像：<input type="file" name='photo' id="photo"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+    $('form').submit(function () {
+        const username = $('#username').val();
+        const pwd = $('#pwd').val();
+        const file=$('#photo').val();
+        console.log($('form')[0]);
+        let fileData=new FormData($('form')[0]);
+        // $.post('ajax.php', { 'name': username, 'word': pwd,'photo':file}, function (data, status) {
+        //     console.log(data);
+        // })
+
+
+        $.ajax({
+                    url:'ajax.php',
+                    method:'POST',
+                    data:fileData,
+                    async:false,
+                    cache: false,
+                    contentType: false,  
+                    processData: false,
+                    success(data){
+                        console.log(data);
+                    },
+                    error(error){
+                        console.log(error);
+                    }
+                })
+
+        return false;
+    })
+</script>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理员登录</title>
+    <!-- 引入ui -->
+    <link rel="stylesheet" href="layui/layui/css/layui.css" />
+    <script src="./layui/layui/layui.js"></script>
+
+    <style>
+        .container{
+            width: 450px;
+            margin:50px auto;
+        }
+        .login{
+            margin:20px auto;
+            width:120px;
+        }
+
+        .login img{
+            width:120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        .layui-btn{
+            background-color:#333 !important;
+        }
+        
+        .reg{
+            margin-left:50px;
+        }
+
+        .register{
+            padding-top:20px;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+
+            <div class='login'>
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557466430024&di=bd03ed16c7e443439a0d9cc701a4a363&imgtype=0&src=http%3A%2F%2Fimg.topnews9.com%2FPublic%2Fupload%2F20141105%2F5459dbc20fc3b-760x308.jpg"
+                    alt="">
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">输入用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                        class="layui-input" id="login-user">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码框</label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input" id="login-pwd">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即登录</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+
+                    <a href="javascript:void(0)" class="reg">注册</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+
+
+<script>
+
+    // Demo
+    // layui.use('form', function () {
+    //     var form = layui.form;
+
+    //     //监听提交
+    //     form.on('submit(formDemo)', function (data) {
+    //         layer.msg(JSON.stringify(data.field));
+    //         return false;
+    //     });
+    // });
+
+</script>
+
+<!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+
+    $(function () {
+
+        $(".reg").click(function () {
+
+            // 弹出层
+            layui.use('layer', function () {
+                var layer = layui.layer;
+
+                layer.open({
+                    type: 1,
+                    title: ['管理员注册', 'color:red'],
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['420px', '240px'], //宽高
+                    content: $('.register'),
+                    success() {
+                        $(":focus").blur();
+                    }
+                });
+
+            });
+
+        })
+
+
+        // 执行立即注册
+        $("#regnow").click(function () {
+
+            //    获取表单数据
+            var userName = $('#reg-username').val();
+            var userPwd = $('#reg-pwd').val();
+
+            // 进行规范性检查
+            var exg = /^[a-z1-9]{4,12}$/;
+            if (!exg.test(userName) || !exg.test(userPwd)) {
+
+                // 弹出层
+                layui.use('layer', function () {
+                    var layer = layui.layer;
+
+                    layer.msg('用户名或密码有误');
+
+                });
+            } else {
+
+                // ajax数据填充
+                $.post('login.php', { 'uname': userName, 'pwd': userPwd }, function (data) {
+                    console.log(data);
+
+                    if (data === 'OK') {
+                        // 弹出层
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            // layer.closeAll(); 关闭所有弹窗口
+                            // {shake:-1} 加这个弹出框不会抖动
+                            layer.msg('注册成功！', { shake: -1 }, function () {
+                                layer.closeAll();
+                            });
+
+                        });
+                    } else {
+                        // 弹出层
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+
+                            layer.msg('抱歉，注册失败！');
+
+                        });
+                    }
+                })
+
+            }
+
+        })
+
+        // 登录
+        $('form').submit(function () {
+
+            // 获取表单值
+            var uname = $("#login-user").val().trim();
+
+            var pwd = $("#login-pwd").val().trim();
+
+            // 进行规范性检查
+            var exg = /^[a-z1-9]{4,12}$/;
+            if (!exg.test(uname) || !exg.test(pwd)) {
+
+                // 弹出层
+                layui.use('layer', function () {
+                    var layer = layui.layer;
+
+                    layer.msg('用户名或密码有误');
+
+                });
+            } else {
+
+                // 后端验证
+                $.post('check_login.php', { 'uname': uname, 'pwd': pwd }, function (data) {
+
+                    if (data === 'ok') {
+
+                        // 弹出层
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+
+                            layer.msg('登录成功！', {shake:-1},function () {
+                                window.location.href = 'main.php';
+                            });
+
+                        });
+
+
+                    } else {
+                        // 弹出层
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+
+                            layer.msg('登录失败！');
+
+                        });
+                    }
+                })
+
+            }
+
+            return false;
+        })
+
+    })
+
+</script>
+
+<div class='register'>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入框</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input" style="width:280px;"
+                id="reg-username">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码框</label>
+        <div class="layui-input-block">
+            <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input" style="width:280px;"
+                id="reg-pwd">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-filter="formDemo" id="regnow">立即注册</button>
+        </div>
+
+    </div>
+
+</div>
+
+</html>

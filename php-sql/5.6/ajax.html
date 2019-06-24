@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax异步表单验证</title>
+</head>
+<body>
+    <form>
+        <p>用户名：<input type="text" name='username' id="username" value="">
+        <span></span></p>
+        <p>密码：<input type="text" name="pwd" id="pwd"><span></span></p>
+        <p>头像:<input type="file" name='photo'></p>
+        <p><input type="submit" value="注册"></p>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- 逻辑程序 -->
+<script>
+    $(function () {
+
+        $('form').submit(function(){
+            console.log($("form"));
+            console.log($("form")[0]);
+
+            var formData = new FormData($("form")[0]);
+
+            var uname=$('#username').val();
+            var pwd=$('#pwd').val();
+            var res='';
+            if(uname.length !=6){
+                $('#username').next().html('用户名填写不规范');
+            }else{
+                $('#username').next().html('');
+            }
+
+            if(pwd.length<4){
+                $('#pwd').next().text('密码不对');
+            }else{
+                $('#pwd').next().text('');
+            }
+            // 检测每个表单项的结果
+            $('span').each(function(){
+                // console.log($(this));
+                $(this).html();
+            })
+
+            if(res.length>0){
+                alert('您有错误项目');
+            }else{//表示所有的项目填写正确
+                // 通过ajax收发数据
+
+                // $.post('ajax.php',{'x':uname,'pwd':pwd},function(data,status){
+                //     console.log(data);
+                // })
+                $.ajax({
+                    url:'ajax.php',
+                    method:'POST',
+                    data:formData,
+                    async:false,
+                    cache: false,
+                    contentType: false,  
+                    processData: false,
+                    success(data){
+                        console.log(data);
+                    },
+                    error(error){
+                        console.log(error);
+                    }
+                })
+
+            }
+            // 表单始终不能提交
+            return false;
+        })
+        
+    })
+</script>
+</html>
